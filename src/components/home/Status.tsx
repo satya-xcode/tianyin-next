@@ -14,7 +14,6 @@ const stats = [
 function Status() {
     const theme = useTheme();
     const { spacing } = theme;
-    const { isMobile, isTablet } = useDeviceType()
 
     return (
         <>
