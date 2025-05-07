@@ -2,10 +2,13 @@
 import { memo, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 "@ts-expect-error"
 import "swiper/css";
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 "@ts-expect-error"
 import "swiper/css/navigation";
+// eslint-disable-next-line @typescript-eslint/no-unused-expressions
 "@ts-expect-error"
 import "swiper/css/pagination";
 import { Box, Button, Container, Stack, Typography, useTheme } from "@mui/material";

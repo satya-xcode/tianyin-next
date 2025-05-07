@@ -1,7 +1,7 @@
 'use client'
 import { Build, Computer, ElectricalServices, Factory, Leaderboard, Memory, People, PrecisionManufacturing, Verified } from "@mui/icons-material";
 import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
-//@ts-expect-error
+// @ts-expect-error: Importing Splide and SplideSlide from @splidejs/react-splide is not typed correctly.
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
