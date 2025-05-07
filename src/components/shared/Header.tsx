@@ -1,10 +1,9 @@
 'use client';
-
 import React from 'react';
 import {
     AppBar,
     Toolbar,
-    Typography,
+
     Button,
     IconButton,
     Drawer,
@@ -16,29 +15,36 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import useDeviceType from '@/hooks/ui/useDeviceType';
 
 const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
-    { label: 'Services', href: '/services' },
     { label: 'Contact', href: '/contact' },
+    { label: 'Career', href: '/career' },
+    { label: 'Blog', href: '/blog' },
 ];
 
 export default function Header() {
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    const { isMobile } = useDeviceType()
     const [drawerOpen, setDrawerOpen] = React.useState(false);
 
     return (
         <>
             <AppBar position="static">
                 <Toolbar>
-                    <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                        YourBrand
-                    </Typography>
-
+                    {/* <Typography variant="h6" sx={{ flexGrow: 1 }}>
+                    </Typography> */}
+                    <Link href="." style={{ flex: 1 }}>
+                        <img
+                            src={'logo/logo.png'}
+                            alt="Tianyin Worldtech India Pvt Ltd Logo"
+                            title="Tianyin Worldtech India Pvt Ltd"
+                            loading="lazy"
+                            width={"120"} // Adjust based on design
+                            height="40"
+                        />
+                    </Link>
                     {isMobile ? (
                         <>
                             <IconButton

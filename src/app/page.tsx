@@ -1,4 +1,9 @@
-import { Container, Typography } from '@mui/material';
+import LeadingOem from '@/components/home/LeadingOem';
+import Status from '@/components/home/Status';
+import AutoPlaySplideCarousel from '@/components/slider/AutoPlaySplideCarousel';
+import SwiperCrousel from '@/components/slider/SwiperCrousel';
+
+import { Container } from '@mui/material';
 
 export const metadata = {
   title: 'Home | YourBrand',
@@ -6,14 +11,13 @@ export const metadata = {
 };
 
 export default function Home() {
+
   return (
-    <Container component="main" sx={{ py: 6 }}>
-      <Typography variant="h2" component="h1" gutterBottom>
-        Welcome to YourBrand
-      </Typography>
-      <Typography variant="body1">
-        We are committed to delivering top-notch solutions for businesses using cutting-edge technology. Explore our services to learn more.
-      </Typography>
+    <Container maxWidth={false} disableGutters component="main" sx={{}}>
+      <SwiperCrousel />
+      <Status />
+      <LeadingOem />
+      <AutoPlaySplideCarousel />
     </Container>
   );
 }
