@@ -2,7 +2,6 @@
 import { CardContent, Grid, Typography, useTheme } from "@mui/material";
 import CountUp from 'react-countup';
 import { memo } from "react";
-import useDeviceType from "@/hooks/ui/useDeviceType";
 import AnimatedHoveredBorder from "../animations/items/AnimatedHoveredBorder";
 
 const stats = [
