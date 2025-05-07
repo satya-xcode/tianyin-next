@@ -58,7 +58,7 @@ export default function AutoPlaySplideCarousel() {
                     arrows: false, // Disable navigation buttons
                 }}
                 onMove={(splide: any) => {
-                    const activeSlide = splide.Components.Elements.slides[splide.index];
+                    const activeSlide = (splide as Splide).Components.Elements.slides[(splide as Splide).index];
                     activeSlide.scrollIntoView({ behavior: "smooth", block: "center" });
                 }}
                 extensions={{ AutoScroll }}
