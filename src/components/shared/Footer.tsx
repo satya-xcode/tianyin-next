@@ -9,7 +9,6 @@ const Footer = () => {
         <Box
             component="footer"
             sx={{
-                mt: spacing(4),
                 bgcolor: "primary.dark",
                 color: "#fff",
                 position: "relative", // Ensure the footer is positioned relative for absolute child elements

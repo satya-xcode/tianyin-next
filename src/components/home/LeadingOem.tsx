@@ -10,7 +10,7 @@ function LeadingOem() {
     const { isMobile, isDesktop, isTablet } = useDeviceType()
     const cardMediaSize = isMobile ? 130 : isTablet ? 150 : isDesktop ? 170 : 200
     return (
-        <Stack p={4} spacing={4}>
+        <Stack spacing={4}>
             <Stack gap={2}>
                 <Typography component={'h3'} data-aos='fade-up' variant={'h1'} fontWeight="bold" align="center">
                     Leading OEM Solutions Provider for Chargers, Adapters, Telecom Equipment, and POE Technology

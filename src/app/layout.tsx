@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider, Toolbar } from "@mui/material";
 import Header from "@/components/shared/Header";
 import theme from "@/theme/theme";
 import Footer from "@/components/shared/Footer";
@@ -78,6 +78,7 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <Header />
+            <Toolbar />
             {children}
             <Footer />
           </ThemeProvider>

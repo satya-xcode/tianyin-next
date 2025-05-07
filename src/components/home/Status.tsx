@@ -11,12 +11,10 @@ const stats = [
 ];
 
 function Status() {
-    const theme = useTheme();
-    const { spacing } = theme;
 
     return (
         <>
-            <Grid m={spacing(4)} container spacing={spacing(4)} justifyContent="center">
+            <Grid container spacing={4} justifyContent="center">
                 {stats.map((stat, index) => (
                     <Grid size={{ xs: 12, sm: 6, md: 4, lg: 4, xl: 4 }} key={index}>
                         <AnimatedHoveredBorder>

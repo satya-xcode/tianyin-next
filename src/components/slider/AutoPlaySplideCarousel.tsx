@@ -22,12 +22,8 @@ const capabilities = [
 
 export default function AutoPlaySplideCarousel() {
     return (
-        <Box>
-
-            <Stack
-                alignItems={'center'}
-                p={4}
-            >
+        <>
+            <Stack alignItems={'center'}>
                 <Typography data-aos='fade-up' variant={'h2'} fontWeight="bold" align="center">
                     Our Capabilities
                 </Typography>
@@ -84,7 +80,7 @@ export default function AutoPlaySplideCarousel() {
                     </SplideSlide>
                 ))}
             </Splide>
-        </Box>
+        </>
 
     );
 }
