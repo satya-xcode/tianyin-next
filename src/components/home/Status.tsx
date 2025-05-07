@@ -1,5 +1,5 @@
 'use client'
-import { CardContent, Grid, Typography, useTheme } from "@mui/material";
+import { CardContent, Grid, Typography } from "@mui/material";
 import CountUp from 'react-countup';
 import { memo } from "react";
 import AnimatedHoveredBorder from "../animations/items/AnimatedHoveredBorder";

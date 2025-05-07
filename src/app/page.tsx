@@ -6,7 +6,7 @@ import Status from '@/components/home/Status';
 import AutoPlaySplideCarousel from '@/components/slider/AutoPlaySplideCarousel';
 import SwiperCrousel from '@/components/slider/SwiperCrousel';
 import { whyChooseUs } from '@/data/WhyChoose';
-import { ElectricalServices, PrecisionManufacturing, Settings, WhatsApp } from '@mui/icons-material';
+import { ElectricalServices, PrecisionManufacturing, Settings } from '@mui/icons-material';
 import { Box, Button, Card, CardContent, Container, Grid, Stack, Typography } from '@mui/material';
 import Link from 'next/link';
 
@@ -174,7 +174,7 @@ export default function Home() {
                   fontStyle: 'italic',
                 }}
               >
-                "Powering Innovation and Excellence Since 2015"
+                Powering Innovation and Excellence Since 2015
               </Typography>
 
               <Typography align="center" variant={'body1'} color="textSecondary">

@@ -5,7 +5,7 @@ import useDeviceType from "../../hooks/ui/useDeviceType";
 import { useRouter } from "next/navigation";
 
 interface HeroSectionProps {
-    title: any;
+    title: string;
     description: string;
     backgroundImage: string;
     ctaText?: string;

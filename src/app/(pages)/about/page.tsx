@@ -45,7 +45,7 @@ export default function About() {
                                     Trusted Electronics Manufacturer
                                 </Typography>
                                 <Typography component="h2" variant={'h2'} fontWeight="bold">
-                                    Noida's Premier Charger & Power Adapter Manufacturer
+                                    Noida&apos;s Premier Charger & Power Adapter Manufacturer
                                 </Typography>
 
                                 <Typography align="left" component="p" variant={'body1'} color="textSecondary">

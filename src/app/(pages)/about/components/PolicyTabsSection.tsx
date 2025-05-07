@@ -1,5 +1,5 @@
 'use client'
-import { Container, Grid, Typography, Button, Tabs, Tab, Box, Stack } from '@mui/material';
+import { Grid, Typography, Button, Tabs, Tab, Box, Stack } from '@mui/material';
 import { useState } from 'react';
 
 const policies = [
