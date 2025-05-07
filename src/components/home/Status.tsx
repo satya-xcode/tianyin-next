@@ -16,7 +16,6 @@ function Status() {
     const { spacing } = theme;
     const { isMobile, isTablet } = useDeviceType()
 
-    const valueVariant = isMobile ? "h6" : isTablet ? "h5" : "h4";
     return (
         <>
             <Grid m={spacing(4)} container spacing={spacing(4)} justifyContent="center">
@@ -34,9 +33,9 @@ function Status() {
 
                                 {/* Value */}
                                 <Typography
-                                    variant={valueVariant} // Adjust font size for mobile
+                                    variant={'h2'} // Adjust font size for mobile
                                     fontWeight={700}
-                                    component={'h4'}
+                                    component={'p'}
                                 >
                                     <CountUp start={0} end={stat.value} duration={5} separator="," />
                                 </Typography>

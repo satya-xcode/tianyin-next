@@ -32,7 +32,7 @@ export default function AutoPlaySplideCarousel() {
                     Our Capabilities
                 </Typography>
 
-                <Typography variant={'h3'} align="center" color="text.secondary">
+                <Typography variant={'body1'} align="center" color="text.secondary">
                     Driving excellence with cutting-edge technology.
                 </Typography>
             </Stack>
@@ -78,7 +78,7 @@ export default function AutoPlaySplideCarousel() {
                         >
                             <CardContent>
                                 <Box sx={{ color: "primary.main" }}>{capability.icon}</Box>
-                                <Typography variant={'h3'} fontWeight={500}>{capability.text}</Typography>
+                                <Typography variant={'body1'} fontWeight={500}>{capability.text}</Typography>
                             </CardContent>
                         </Card>
                     </SplideSlide>

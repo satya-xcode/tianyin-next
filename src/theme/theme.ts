@@ -4,7 +4,7 @@ import { createTheme, responsiveFontSizes } from '@mui/material';
 const baseTheme = createTheme({
   spacing: 8,
   palette: {
-    mode: 'light',
+    mode: 'dark',
     primary: {
       main: '#1976d2', // Professional blue
       dark: '#004ba0',

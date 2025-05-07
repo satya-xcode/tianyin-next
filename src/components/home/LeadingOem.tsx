@@ -50,7 +50,7 @@ function LeadingOem() {
                                             <Box>
                                                 <Typography
                                                     sx={{ ...singleLineSort }}
-                                                    variant={'h2'} fontWeight="bold">
+                                                    variant={'h3'} fontWeight="bold">
                                                     {industry.title}
                                                 </Typography>
                                                 <Typography
@@ -60,7 +60,7 @@ function LeadingOem() {
                                         </Box>
                                         <Typography
                                             sx={{ ...doubleLineSort }}
-                                            variant={'h3'}>
+                                            variant={'body1'}>
                                             {industry.description}
                                         </Typography>
                                     </Stack>

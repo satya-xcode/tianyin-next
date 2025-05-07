@@ -187,7 +187,7 @@ function SwiperCarousel() {
                                 <motion.div variants={fadeInUp}>
                                     <Typography
                                         align={isMobile ? "center" : "left"}
-                                        variant={'h3'}
+                                        variant={'body1'}
                                     >
                                         {slide.caption}
                                     </Typography>
