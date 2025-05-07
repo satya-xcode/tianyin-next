@@ -2,11 +2,11 @@
 import { memo, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-// @ts-ignore
+"@ts-expect-error"
 import "swiper/css";
-// @ts-ignore
+"@ts-expect-error"
 import "swiper/css/navigation";
-// @ts-ignore
+"@ts-expect-error"
 import "swiper/css/pagination";
 import { Box, Button, Container, Stack, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";

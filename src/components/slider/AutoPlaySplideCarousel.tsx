@@ -1,7 +1,7 @@
 'use client'
 import { Build, Computer, ElectricalServices, Factory, Leaderboard, Memory, People, PrecisionManufacturing, Verified } from "@mui/icons-material";
 import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
-// @ts-ignore
+//@ts-expect-error
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
