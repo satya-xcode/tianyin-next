@@ -52,7 +52,7 @@ export default function MeetingSection() {
     );
 }
 
-// Reusable AchievementsCard Component
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const AchievementsCard = ({ image, title, description }: { image: any, title: any, description: any, onClick?: any }) => {
     const { isMobile } = useDeviceType()
     return (

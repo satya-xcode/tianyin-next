@@ -12,7 +12,7 @@ import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function LightBox({ photos }: { photos: any }) {
     const [index, setIndex] = useState(-1);
     return (

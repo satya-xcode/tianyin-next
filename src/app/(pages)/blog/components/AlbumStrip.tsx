@@ -1,6 +1,6 @@
 'use client'
 import { Grid, Card, CardMedia, CardContent, Typography, Box, Button, Dialog, CardActionArea, Stack, useTheme, Drawer } from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+// import CloseIcon from '@mui/icons-material/Close';
 import { useState } from 'react';
 import useDeviceType from '@/hooks/ui/useDeviceType';
 import { cardImageZoomStyles } from '@/components/animations/css/export/cardImageZoomStyles';
@@ -8,7 +8,8 @@ import { singleLineSort } from '@/components/animations/css/export/textSortStyle
 import LightBox from './LightBox';
 const breakpoints = [1080, 640, 384, 256, 128, 96, 64, 48];
 
-// Utility function to map photos
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const mapPhotos = (photos: any) => photos.map(({ asset, alt, width, height }: { asset: string, alt: string, width: number, height: number }) => ({
     src: asset,
     alt,
@@ -191,7 +192,7 @@ const albums = [
         ],
     }
 ];
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const imageMap: any = {
     "Breaking Barriers: Women in Leadership": womensphoto2024,
     "Empowering Women in STEM": womensphoto2025,
@@ -203,10 +204,15 @@ const imageMap: any = {
 // Main component
 export default function AlbumStrip() {
     const { spacing } = useTheme()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const { isMobile } = useDeviceType()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [selectedAlbum, setSelectedAlbum] = useState<any>(null);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [selectedAlbumDrawer, setSelectedAlbumDrawer] = useState<any>(null);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleOpen = (album: any) => setSelectedAlbum(album);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleOpenDrawer = (album: any) => setSelectedAlbumDrawer(album);
     const handleClose = () => setSelectedAlbum(null);
     const handleCloseDrawer = () => setSelectedAlbumDrawer(null);

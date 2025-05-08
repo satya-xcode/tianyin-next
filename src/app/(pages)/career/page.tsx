@@ -1,4 +1,4 @@
-import { Grid, Typography, useTheme, Stack, Paper, } from "@mui/material";
+import { Grid, Typography, Stack, Paper, } from "@mui/material";
 import CareerForm from "./components/CareerForm";
 import HeroSection from "@/components/shared/HeroSection";
 import SwiperEmployeeCarousel from "@/components/slider/SwiperEmployeeCarousel";
@@ -98,7 +98,7 @@ const CareerPage = () => {
                     >Employee Testimonials</Typography>
 
                 </Stack>
-                <Typography data-aos="fade-down" variant={'body1'} align="center">"Working here has been a fantastic experience. The team is supportive, and the opportunities are endless!"</Typography>
+                <Typography data-aos="fade-down" variant={'body1'} align="center">Working here has been a fantastic experience. The team is supportive, and the opportunities are endless</Typography>
                 <SwiperEmployeeCarousel />
 
             </Stack>

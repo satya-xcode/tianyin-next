@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { useState } from "react";
-import { useFormik } from "formik";
+import { FormikValues, useFormik } from "formik";
 import * as Yup from "yup";
 import {
     Container,
@@ -55,7 +55,7 @@ export default function CareerForm() {
             resume: null, // Initializing resume field with null
         },
         validationSchema,
-        onSubmit: async (values: any) => {
+        onSubmit: async (values: FormikValues) => {
             try {
                 formik.setSubmitting(true);
                 const formData = new FormData();
@@ -89,7 +89,7 @@ export default function CareerForm() {
         },
     });
 
-
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleFileChange = (event: any) => {
         const file = event.currentTarget.files[0];
         formik.setFieldValue('resume', file);
