@@ -49,13 +49,13 @@ function ContactForm() {
                     confirmButtonText: 'Okay'
                 });
                 formik.resetForm();
-                // // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-                // "@ts-expect-error"
-            } catch (err) {
+                // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+                "@ts-expect-error"
+            } catch (err: unknown) {
                 Swal.fire({
                     title: 'Failed to send email !',
                     // @ts-expect-error: err is not typed correctly.
-                    text: err.response?.data?.message,
+                    text: err?.response?.data?.message,
                     icon: 'error',
                     confirmButtonText: 'Okay'
                 });
