@@ -5,7 +5,7 @@ import ContactForm from "./components/ContactForm";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: 'Home | YourBrand',
+    title: 'Contact | YourBrand',
     description: 'Welcome to YourBrand. Learn about our mission and services.',
 };
 

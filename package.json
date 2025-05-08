@@ -26,9 +26,11 @@
     "react": "^19.0.0",
     "react-countup": "^6.5.3",
     "react-dom": "^19.0.0",
+    "react-photo-album": "^3.1.0",
     "sweetalert2": "^11.21.0",
     "swiper": "^11.2.6",
     "swr": "^2.3.3",
+    "yet-another-react-lightbox": "^3.23.0",
     "yup": "^1.6.1"
   },
   "devDependencies": {
