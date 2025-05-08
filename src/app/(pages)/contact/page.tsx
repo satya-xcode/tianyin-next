@@ -1,5 +1,5 @@
 import { Container, Grid, Typography, Card, CardContent, IconButton, Stack, CardActionArea } from "@mui/material";
-import { Phone, Email, LocationOn, ContentCopy, CheckCircleOutline } from "@mui/icons-material";
+import { Phone, Email, LocationOn } from "@mui/icons-material";
 import HeroSection from "@/components/shared/HeroSection";
 import ContactForm from "./components/ContactForm";
 import { Metadata } from "next";

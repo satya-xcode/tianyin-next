@@ -4,7 +4,7 @@ import { Grid, Typography, TextField, Card, CardContent, IconButton, useTheme, S
 import { Send, Mail } from "@mui/icons-material";
 import Swal from 'sweetalert2';
 import * as Yup from 'yup';
-import { FormikErrors, FormikValues, useFormik } from 'formik';
+import { FormikValues, useFormik } from 'formik';
 import { useGeneralEnquiry } from '@/hooks/data/useGeneralEnquiry';
 import Lottie from 'lottie-react';
 import groovyWalkAnimation from "../../../../assets/lotties/l2.json";
@@ -49,6 +49,8 @@ function ContactForm() {
                     confirmButtonText: 'Okay'
                 });
                 formik.resetForm();
+                // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+                "@ts-expect-error"
             } catch (err: any) {
                 Swal.fire({
                     title: 'Failed to send email !',
