@@ -11,7 +11,7 @@ export const useCareerEnquiry = () => {
         shouldRetryOnError: false
     });
     // console.log('Brands', data)
-    const createCareerEnquiry = useCallback(async (data: any) => {
+    const createCareerEnquiry = useCallback(async (data: unknown) => {
         try {
             const response = await axios.post(prodBaseUrl + 'career-enquiries', data);
             mutate();
@@ -22,7 +22,7 @@ export const useCareerEnquiry = () => {
         }
     }, [mutate]);
 
-    const updateCareerEnquiry = useCallback(async (updatedBrand: any) => {
+    const updateCareerEnquiry = useCallback(async (updatedBrand: unknown) => {
         try {
             const response = await axios.put(prodBaseUrl + `career-enquiries`, updatedBrand);
             mutate();
@@ -33,7 +33,7 @@ export const useCareerEnquiry = () => {
         }
     }, [mutate]);
 
-    const deleteGeneralEnquiry = useCallback(async (brandId: any) => {
+    const deleteGeneralEnquiry = useCallback(async (brandId: string) => {
         try {
             const response = await axios.delete(prodBaseUrl + `enquiries`, { data: brandId });
             mutate(); // Revalidate data

@@ -11,7 +11,7 @@ export const useGeneralEnquiry = () => {
         shouldRetryOnError: false
     });
     // console.log('Brands', data)
-    const createGeneralEnquiry = useCallback(async (data: any) => {
+    const createGeneralEnquiry = useCallback(async (data: unknown) => {
         try {
             const response = await axios.post(prodBaseUrl + 'enquiries', data);
             mutate();
@@ -22,7 +22,7 @@ export const useGeneralEnquiry = () => {
         }
     }, [mutate]);
 
-    const updateGeneralEnquiry = useCallback(async (updatedBrand: any) => {
+    const updateGeneralEnquiry = useCallback(async (updatedBrand: unknown) => {
         try {
             const response = await axios.put(prodBaseUrl + `enquiries`, updatedBrand);
             mutate();
@@ -33,7 +33,7 @@ export const useGeneralEnquiry = () => {
         }
     }, [mutate]);
 
-    const deleteGeneralEnquiry = useCallback(async (brandId: any) => {
+    const deleteGeneralEnquiry = useCallback(async (brandId: string) => {
         try {
             const response = await axios.delete(prodBaseUrl + `enquiries`, { data: brandId });
             mutate(); // Revalidate data

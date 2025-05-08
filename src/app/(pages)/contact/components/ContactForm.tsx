@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-import { Container, Grid, Typography, TextField, Card, CardContent, IconButton, useTheme, Stack, LinearProgress, Avatar, CardHeader, CardActionArea, Button } from "@mui/material";
-import { Phone, Email, LocationOn, Send, Mail, ContentCopy, CheckCircleOutline } from "@mui/icons-material";
+import { Grid, Typography, TextField, Card, CardContent, IconButton, useTheme, Stack, LinearProgress, Avatar, CardHeader, Button } from "@mui/material";
+import { Send, Mail } from "@mui/icons-material";
 import Swal from 'sweetalert2';
 import * as Yup from 'yup';
-import { useFormik } from 'formik';
+import { FormikErrors, FormikValues, useFormik } from 'formik';
 import { useGeneralEnquiry } from '@/hooks/data/useGeneralEnquiry';
 import Lottie from 'lottie-react';
 import groovyWalkAnimation from "../../../../assets/lotties/l2.json";
@@ -32,7 +32,7 @@ function ContactForm() {
             requirement: '',
         },
         validationSchema,
-        onSubmit: async (values: any) => {
+        onSubmit: async (values: FormikValues) => {
             try {
                 formik.setSubmitting(true);
                 const formData = new FormData();
@@ -49,11 +49,10 @@ function ContactForm() {
                     confirmButtonText: 'Okay'
                 });
                 formik.resetForm();
-            } catch (error: any) {
-                console.log('SubmitError', error)
+            } catch (err: any) {
                 Swal.fire({
                     title: 'Failed to send email !',
-                    text: error?.response?.data?.message,
+                    text: err.response?.data?.message,
                     icon: 'error',
                     confirmButtonText: 'Okay'
                 });
