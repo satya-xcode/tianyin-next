@@ -292,6 +292,7 @@ export default function AlbumStrip() {
                         </Stack>
                         <Grid container spacing={spacing(4)}>
                             {
+                                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                                 selectedAlbumDrawer?.albums?.map((post: any, index: string) => {
                                     return (
                                         <Grid size={{ xs: 12, md: 3 }} key={index} data-aos="fade-up">
@@ -343,7 +344,7 @@ export default function AlbumStrip() {
 }
 
 
-// Dialog component
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function ImagesDialog({ open, handleClose, des, photos, title, date }: { open: boolean, handleClose: any, des: any, photos?: any, title: string, date: string }) {
     const { spacing } = useTheme()
 
