@@ -48,6 +48,7 @@ function ContactForm() {
                     confirmButtonText: 'Okay'
                 });
                 formik.resetForm();
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
             } catch (err: any) {
                 Swal.fire({
                     title: 'Failed to send email !',
