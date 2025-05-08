@@ -10,16 +10,50 @@ import { ElectricalServices, PrecisionManufacturing, Settings } from '@mui/icons
 import { Box, Button, Card, CardContent, Container, Grid, Stack, Typography } from '@mui/material';
 import Link from 'next/link';
 
-
 export const metadata = {
-  title: 'Home | YourBrand',
-  description: 'Welcome to YourBrand. Learn about our mission and services.',
+  title: 'Tianyin Worldtech | Top Mobile Charger Manufacturer in Noida, India',
+  description:
+    'Tianyin Worldtech is a leading OEM manufacturer of high-quality mobile chargers in Noida, India. Trusted for precision manufacturing, fast delivery, and reliable products.',
+  keywords:
+    'Mobile Charger Manufacturer Noida, Mobile Charger Supplier India, OEM Charger Manufacturing, Fast Charging Solutions, Tianyin Worldtech',
+  generator: 'Next.js 15.3',
+  applicationName: 'Tianyin Worldtech',
+  creator: 'Tianyin Worldtech India Pvt. Ltd.',
+  publisher: 'Tianyin Worldtech India Pvt. Ltd.',
+  authors: [{ name: 'Tianyin Worldtech Team', url: 'https://tianyinworldtech.com' }],
+  alternates: {
+    canonical: 'https://tianyinworldtech.com/',
+  },
+  openGraph: {
+    title: 'Tianyin Worldtech | Best Mobile Charger Manufacturer in Noida, India',
+    description:
+      'Explore premium mobile chargers from Tianyin Worldtech – OEM supplier based in Noida. Trusted by 150+ global partners for innovation and quality.',
+    url: 'https://tianyinworldtech.com/',
+    siteName: 'Tianyin Worldtech',
+    images: [
+      {
+        url: 'https://tianyinworldtech.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Tianyin Worldtech - Mobile Charger Manufacturer',
+      },
+    ],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tianyin Worldtech | OEM Mobile Charger Manufacturer in India',
+    description:
+      'We manufacture high-quality mobile chargers with precision and rapid delivery. Trusted OEM partner in India.',
+    creator: '@tianyinworldtech',
+    images: ['https://tianyinworldtech.com/og-image.jpg'],
+  },
 };
 
 export default function Home() {
-
   return (
-    <Container maxWidth={false} disableGutters component="main" sx={{}}>
+    <Container maxWidth={false} disableGutters component="main">
       <SwiperCrousel />
       <Stack spacing={4} p={4}>
         <Status />
@@ -27,14 +61,13 @@ export default function Home() {
         <AutoPlaySplideCarousel />
         <Infrastructure />
 
-        {/* Best Mobile Charger Manufacturer in Noida */}
-        <Stack >
+        <Stack>
           <Grid container spacing={4} alignItems="center">
             <Grid size={{ xs: 12, md: 4 }} data-aos="zoom-in-right">
               <Box
                 component="img"
                 src="/image/assembl2.jpg"
-                alt="Best Mobile Charger Manufacturer in Noida"
+                alt="Mobile charger assembly at Tianyin Worldtech Noida"
                 sx={{
                   width: '100%',
                   borderRadius: '16px',
@@ -44,46 +77,46 @@ export default function Home() {
             </Grid>
             <Grid size={{ xs: 12, md: 8 }} data-aos="zoom-in-left">
               <Stack gap={3}>
-                <Typography component="h1" variant={'h2'} fontWeight="bold">
-                  Best Mobile Charger Manufacturer in Noida
+                <Typography component="h1" variant="h2" fontWeight="bold">
+                  OEM Mobile Charger Manufacturer in Noida – Tianyin Worldtech
                 </Typography>
-                <Typography component="p" textAlign={'justify'} variant={'body1'} color="text.secondary">
-                  When heading out, the first thing we pack is a reliable portable mobile charger. As an essential accessory in our daily lives, it’s crucial to have a fast and efficient charging solution. At <strong>Tianyin Worldtech</strong>, we are recognized as one of the <strong>best mobile charger manufacturers in Noida</strong>. With us, you can find a wide range of high-quality mobile chargers designed for durability and performance at affordable rates. Switch to our high-capacity rapid charging solutions to make your travels easier and more convenient.
+                <Typography textAlign="justify" variant="body1" color="text.secondary">
+                  At <strong>Tianyin Worldtech</strong>, we deliver high-quality mobile chargers known for reliability, efficiency, and safety. As a premier <strong>OEM mobile charger manufacturer in Noida</strong>, our chargers support rapid charging and long-lasting performance for all device types. Choose innovation and precision for your power needs.
                 </Typography>
                 <Button
                   variant="contained"
                   color="primary"
                   size="large"
                   component={Link}
-                  href='products'
+                  href="/products"
                   sx={{ width: 'fit-content', mt: 2 }}
                 >
-                  Explore Our Products
+                  View Our OEM Chargers
                 </Button>
               </Stack>
             </Grid>
           </Grid>
         </Stack>
 
-        <Stack >
+        <Stack>
           <Grid container spacing={4} alignItems="center">
             <Grid size={{ xs: 12, md: 8 }} data-aos="zoom-in">
               <Stack gap={3}>
-                <Typography component="h2" variant={'h2'} fontWeight="bold">
-                  Top Mobile Charger Supplier in India
+                <Typography component="h2" variant="h2" fontWeight="bold">
+                  Trusted Mobile Charger Supplier Across India
                 </Typography>
-                <Typography component="p" textAlign={'justify'} variant={'body1'} color="text.secondary">
-                  As a leading <strong>mobile charger supplier in India</strong>, Tianyin Worldtech offers chargers with multiple charging ports, ensuring compatibility with various devices. Our team of experienced professionals uses the finest materials to craft high-quality chargers that protect your devices from overcharging. With our commitment to customer satisfaction, we provide doorstep delivery across prime locations in India. Explore our range of reliable and efficient charging solutions today.
+                <Typography textAlign="justify" variant="body1" color="text.secondary">
+                  As a trusted <strong>mobile charger supplier in India</strong>, Tianyin Worldtech delivers chargers with multi-port compatibility, advanced safety features, and premium materials. From doorstep delivery to after-sales support, we power your journey across India and beyond.
                 </Typography>
                 <Button
                   variant="contained"
                   color="primary"
                   size="large"
                   component={Link}
-                  href='contact'
+                  href="/contact"
                   sx={{ width: 'fit-content', mt: 2 }}
                 >
-                  Contact Us Now
+                  Get in Touch
                 </Button>
               </Stack>
             </Grid>
@@ -91,8 +124,7 @@ export default function Home() {
               <Box
                 component="img"
                 src="/image/supplier2.jpg"
-                alt="Top Mobile Charger Supplier in India"
-
+                alt="Mobile charger supplier for India at Tianyin Worldtech"
                 sx={{
                   width: '100%',
                   borderRadius: '16px',
@@ -103,50 +135,33 @@ export default function Home() {
           </Grid>
         </Stack>
 
-
         <Stack spacing={4}>
-          <Typography variant={'h2'} align="center" fontWeight="bold">
-            Why Us ?
+          <Typography variant="h2" align="center" fontWeight="bold">
+            Why Choose Tianyin Worldtech?
           </Typography>
-
-          {/* Features Grid */}
           <Grid container spacing={4}>
             {whyChooseUs.map((item, index) => (
               <Grid size={{ xs: 12, md: 4 }} key={index} data-aos={item.dataAos}>
-
-                <Card sx={{
-                  borderRadius: 0,
-                  textAlign: "center",
-                  minHeight: '180px',
-                  // backdropFilter: "blur(5px)", // Add this line to blur the background
-                  // backgroundColor: "rgba(20, 20, 20, 0.10)", // Add this line to make the card background 50% transparent 
-                }}>
+                <Card sx={{ borderRadius: 0, textAlign: 'center', minHeight: '180px' }}>
                   <BorderInfiniteAnimation style={{ minHeight: '180px' }}>
                     <CardContent>
-                      <Typography variant={'h3'} fontWeight="bold">
+                      <Typography variant="h3" fontWeight="bold">
                         {item.title}
                       </Typography>
-                      <Typography variant={'body1'} color="textSecondary">
+                      <Typography variant="body1" color="textSecondary">
                         {item.description}
                       </Typography>
                     </CardContent>
                   </BorderInfiniteAnimation>
                 </Card>
-
               </Grid>
             ))}
           </Grid>
-
         </Stack>
-
-
 
         <ExpertGuide />
 
-
-        {/* About Section */}
         <Stack>
-          {/* Background Shapes */}
           <Box
             sx={{
               position: 'absolute',
@@ -163,7 +178,7 @@ export default function Home() {
           <Stack sx={{ position: 'relative', zIndex: 2 }}>
             <Stack gap={4} textAlign="center" data-aos="fade-up">
               <Typography
-                variant={'h2'}
+                variant="h2"
                 fontWeight="bold"
                 color="primary.main"
                 sx={{
@@ -177,33 +192,27 @@ export default function Home() {
                 Powering Innovation and Excellence Since 2015
               </Typography>
 
-              <Typography align="center" variant={'body1'} color="textSecondary">
-                We specialize in delivering high-precision manufacturing solutions worldwide, ensuring top-tier quality and reliability. Partnering with 150+ global industries, we are committed to excellence in the following areas:
+              <Typography align="center" variant="body1" color="textSecondary">
+                We specialize in delivering high-precision manufacturing solutions worldwide, trusted by over 150+ global industries for quality and reliability.
               </Typography>
 
-              {/* Cards for Services */}
               <Grid container spacing={4}>
-                {[
-                  {
-                    title: "Production",
-                    description: "We utilize state-of-the-art technology to ensure efficient and effective production processes.",
-                    icon: <PrecisionManufacturing fontSize="large" />,
-                  },
-                  {
-                    title: "Assembly",
-                    description: "Our team of experts provides precise assembly services, ensuring that all components are properly integrated.",
-                    icon: <Settings fontSize="large" />,
-                  },
-                  {
-                    title: "Innovation",
-                    description: "We continuously invest in research and development to stay ahead of the curve and provide innovative solutions.",
-                    icon: <ElectricalServices fontSize="large" />,
-                  },
-                ].map((service, index) => (
+                {[{
+                  title: 'Production',
+                  description: 'Efficient, modern production processes ensure top-notch quality and speed.',
+                  icon: <PrecisionManufacturing fontSize="large" />,
+                }, {
+                  title: 'Assembly',
+                  description: 'Accurate integration of components through advanced assembly practices.',
+                  icon: <Settings fontSize="large" />,
+                }, {
+                  title: 'Innovation',
+                  description: 'Continuous R&D investments to create next-gen charging solutions.',
+                  icon: <ElectricalServices fontSize="large" />,
+                }].map((service, index) => (
                   <Grid size={{ xs: 12, md: 4 }} key={index}>
                     <Card>
                       <CardContent>
-
                         <Box sx={{ textAlign: 'center', mb: 2 }}>
                           <Box
                             sx={{
@@ -220,28 +229,24 @@ export default function Home() {
                             {service.icon}
                           </Box>
                         </Box>
-                        <Typography variant={'h3'} fontWeight="bold" align="center" gutterBottom>
+                        <Typography variant="h3" fontWeight="bold" align="center" gutterBottom>
                           {service.title}
                         </Typography>
-                        <Typography variant={'body1'} color="textSecondary" align="center">
+                        <Typography variant="body1" color="textSecondary" align="center">
                           {service.description}
                         </Typography>
-
                       </CardContent>
                     </Card>
                   </Grid>
                 ))}
               </Grid>
 
-              {/* Call to Action */}
-              <Typography variant={'body1'} fontWeight="bold" color="primary" sx={{ mt: 4 }}>
-                Need high-quality manufacturing services? Call us at <span>(+91) 1204109448</span>
+              <Typography variant="body1" fontWeight="bold" color="primary" sx={{ mt: 4 }}>
+                Need high-quality OEM charger manufacturing? Call us at <span>(+91) 1204109448</span>
               </Typography>
             </Stack>
           </Stack>
         </Stack>
-
-
       </Stack>
     </Container>
   );

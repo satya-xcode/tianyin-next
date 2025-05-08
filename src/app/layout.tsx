@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
@@ -6,7 +6,7 @@ import { CssBaseline, ThemeProvider, Toolbar } from "@mui/material";
 import Header from "@/components/shared/Header";
 import theme from "@/theme/theme";
 import Footer from "@/components/shared/Footer";
-
+import AosInit from './aos-init';
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -17,54 +17,92 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tianyin.in'), // Replace with your actual domain
+  metadataBase: new URL('https://tianyin.in'),
   title: {
     default: 'Tianyin Worldtech India Pvt. Ltd.',
-    template: '%s | Tianyin Worldtech',
+    template: '%s | Tianyin Worldtech India Pvt. Ltd.',
   },
   description:
-    'Tianyin Worldtech is a leading Indian manufacturer of mobile phone chargers and adapters. High-performance, OEM-ready power solutions.',
+    'Tianyin Worldtech India Pvt. Ltd. is a trusted OEM manufacturer of mobile phone chargers, power adapters, EV chargers, and PoE solutions in Noida, Uttar Pradesh.',
   keywords: [
-    'mobile chargers',
-    'phone adapters',
-    'charger manufacturer',
-    'Tianyin Worldtech India',
-    'OEM power accessories',
+    'Tianyin Worldtech',
+    'OEM charger manufacturer',
+    'mobile charger manufacturer India',
+    'EV charger OEM',
+    'PoE power solutions',
+    'power adapter manufacturing Noida',
+    'charger factory India',
+    'Tianyin India',
   ],
-  authors: [{ name: 'Tianyin Worldtech Team', url: 'https://tianyin.in' }],
-  creator: 'Tianyin Worldtech India Pvt. Ltd.',
+  alternates: {
+    canonical: 'https://tianyin.in',
+  },
   openGraph: {
     title: 'Tianyin Worldtech India Pvt. Ltd.',
     description:
-      'Mobile phone charger and adapter manufacturer in India. Trusted OEM supplier worldwide.',
+      'Leading OEM manufacturer of mobile chargers, EV chargers, and power adapters in India. Based in Noida, serving global tech brands.',
     url: 'https://tianyin.in',
-    siteName: 'Tianyin Worldtech',
+    siteName: 'Tianyin Worldtech India Pvt. Ltd.',
+    locale: 'en_US',
+    type: 'website',
     images: [
       {
-        url: 'https://tianyin.in/og-image.jpg', // Replace with your actual OG image
+        url: 'https://tianyin.in/og-image.jpg', // Real OG image
         width: 1200,
         height: 630,
-        alt: 'Tianyin Worldtech charger factory',
+        alt: 'Tianyin Worldtech India - OEM Charger Manufacturer',
       },
     ],
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Tianyin Worldtech India Pvt. Ltd.',
     description:
-      'Reliable mobile charging solutions manufactured in India by Tianyin Worldtech.',
-    images: ['https://tianyin.in/og-image.jpg'], // Replace with your actual OG image
+      'OEM manufacturer of chargers, adapters, and EV charging solutions. Based in Noida, India.',
+    images: ['https://tianyin.in/og-image.jpg'],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
-  alternates: {
-    canonical: 'https://tianyin.in',
+  authors: [
+    {
+      name: 'Tianyin Worldtech India Pvt. Ltd.',
+      url: 'https://tianyin.in',
+    },
+  ],
+  creator: 'Tianyin Worldtech India Pvt. Ltd.',
+  publisher: 'Tianyin Worldtech India Pvt. Ltd.',
+  referrer: 'origin-when-cross-origin',
+  formatDetection: {
+    email: true,
+    address: true,
+    telephone: true,
   },
+  generator: "Next.js 15.3, TypeScript, MUI, SEO-Optimized",
+  applicationName: "Tianyin Worldtech Official Website",
+
 };
+
+export const viewport: Viewport = {
+  colorScheme: 'dark light',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'cyan' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+  userScalable: true,
+  initialScale: 1.0
+}
 
 export default function RootLayout({
   children,
@@ -73,10 +111,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link
+        rel="icon"
+        href="/favicon.ico"
+        sizes="any"
+      />
+      <link
+        rel="icon"
+        href="/icon.png"
+        type="image/png"
+        sizes="16x16"
+      />
+      <link
+        rel="apple-touch-icon"
+        href="/apple-touch-icon.png"
+        type="image/png"
+        sizes="180x180"
+      />
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <CssBaseline />
+            <AosInit />
             <Header />
             <Toolbar />
             {children}

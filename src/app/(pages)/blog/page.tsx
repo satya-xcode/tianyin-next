@@ -2,10 +2,14 @@ import { Box, Stack } from "@mui/material";
 import MeetingSection from "./components/MeetingSection";
 import AlbumStrip from "./components/AlbumStrip";
 import HeroSection from "@/components/shared/HeroSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: 'Blog | YourBrand',
+    description: 'Welcome to YourBrand. Learn about our mission and services.',
+};
 
 const BlogPage = () => {
-
-    // const { bigTitleVariant, sectionLabelVariant } = useResponsiveProps()
     return (
         <>
 
