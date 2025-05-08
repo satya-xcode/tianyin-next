@@ -49,10 +49,9 @@ function ContactForm() {
                     confirmButtonText: 'Okay'
                 });
                 formik.resetForm();
-            } catch (err: unknown) {
+            } catch (err: any) {
                 Swal.fire({
                     title: 'Failed to send email !',
-                    // @ts-expect-error: err is not typed correctly.
                     text: err?.response?.data?.message,
                     icon: 'error',
                     confirmButtonText: 'Okay'
