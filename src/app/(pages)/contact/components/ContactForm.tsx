@@ -6,8 +6,11 @@ import Swal from 'sweetalert2';
 import * as Yup from 'yup';
 import { FormikValues, useFormik } from 'formik';
 import { useGeneralEnquiry } from '@/hooks/data/useGeneralEnquiry';
-import Lottie from 'lottie-react';
+// import Lottie from 'lottie-react';
+// Dynamically import Lottie only on the client
+const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
 import groovyWalkAnimation from "../../../../assets/lotties/l2.json";
+import dynamic from 'next/dynamic';
 const validationSchema = Yup.object({
     fullName: Yup.string().matches(/^[^\d]+$/, 'Full Name must not contain numbers').required('Full Name is required'),
     email: Yup.string().email('Invalid email address').required('Email is required'),
