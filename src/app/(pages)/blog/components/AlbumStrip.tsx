@@ -204,7 +204,7 @@ const imageMap: any = {
 // Main component
 export default function AlbumStrip() {
     const { spacing } = useTheme()
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+     
     const { isMobile } = useDeviceType()
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [selectedAlbum, setSelectedAlbum] = useState<any>(null);
