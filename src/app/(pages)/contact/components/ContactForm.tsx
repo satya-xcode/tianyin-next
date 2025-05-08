@@ -41,7 +41,6 @@ function ContactForm() {
                 formData.append('mobileNumber', values.mobileNumber);
                 formData.append('requirement', values.requirement);
                 const result = await createGeneralEnquiry(values)
-                // console.log('result', result?.data)
                 Swal.fire({
                     title: 'Thank You !',
                     text: result?.message,
