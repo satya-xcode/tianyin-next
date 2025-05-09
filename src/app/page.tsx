@@ -60,7 +60,6 @@ export default function Home() {
         <LeadingOem />
         <AutoPlaySplideCarousel />
         <Infrastructure />
-
         <Stack>
           <Grid container spacing={4} alignItems="center">
             <Grid size={{ xs: 12, md: 4 }} data-aos="zoom-in-right">
@@ -162,7 +161,7 @@ export default function Home() {
         <ExpertGuide />
 
         <Stack>
-          <Box
+          {/* <Box
             sx={{
               position: 'absolute',
               top: 0,
@@ -173,7 +172,7 @@ export default function Home() {
               backgroundSize: '20px 20px',
               zIndex: 1,
             }}
-          />
+          /> */}
 
           <Stack sx={{ position: 'relative', zIndex: 2 }}>
             <Stack gap={4} textAlign="center" data-aos="fade-up">

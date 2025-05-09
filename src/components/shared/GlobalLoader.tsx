@@ -1,11 +1,12 @@
+import { CircularProgress } from '@mui/material'
 import React from 'react'
 
-function AdminPage() {
+function GlobalLoader() {
     return (
         <div style={{ minHeight: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <h1>Admin</h1>
+            <CircularProgress size={50} />
         </div>
     )
 }
 
-export default AdminPage
+export default GlobalLoader

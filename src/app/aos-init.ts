@@ -9,7 +9,7 @@ export default function AosInit() {
         AOS.init({
             duration: 700,
             easing: 'ease-in-out',
-            delay: 50,
+            // delay: 50,
             once: false,
         });
     }, []);

@@ -11,13 +11,14 @@ function LeadingOem() {
     const cardMediaSize = isMobile ? 130 : isTablet ? 150 : isDesktop ? 170 : 200;
 
     return (
-        <Stack spacing={4} component="section" sx={{ px: { xs: 2, sm: 4, md: 8 }, py: { xs: 4, sm: 6, md: 8 } }}>
-            <Stack gap={2} textAlign="center">
+        <Stack spacing={4} component="section">
+            <Stack spacing={2}>
                 <Typography
                     component='h2'
                     data-aos='fade-up'
                     variant='h1'
                     fontWeight="bold"
+                    align='center'
                     sx={{ color: 'primary.main' }}
                 >
                     Leading OEM Manufacturer of Mobile Chargers, Adapters, and Telecom Equipment
@@ -39,8 +40,8 @@ function LeadingOem() {
                             elevation={3}
                             sx={{
                                 height: '100%',
-                                transition: 'transform 0.3s ease',
-                                '&:hover': { transform: 'translateY(-5px)' }
+                                // transition: 'transform 0.3s ease',
+                                // '&:hover': { transform: 'translateY(-5px)' }
                             }}
                         >
                             <CardActionArea

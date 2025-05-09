@@ -1,0 +1,40 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Global Scroll Bar Styles */
+
+/* Chrome, Safari, Edge, Opera */
+::-webkit-scrollbar {
+    width: 7px;
+    /* Change the width of the scroll bar */
+    height: 2px;
+    /* Change the height of the scroll bar (for horizontal scroll bars) */
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(to bottom, rgba(0, 47, 56, 0.95), rgba(143,188,143, 0.95));
+    /* Change the color of the scroll bar thumb */
+    border-radius: 5px;
+    /* Add a rounded corner to the scroll bar thumb */
+    /* box-shadow: 0 0 40px rgba(223, 7, 7, 0.932); */
+    /* Add a shadow effect to the scroll bar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-image: linear-gradient(to bottom, rgba(143,188,143, 0.95), rgba(0, 47, 56, 0.95));
+    /* Change the color of the scroll bar thumb on hover */
+}
+
+::-webkit-scrollbar-track {
+    background-image: linear-gradient(to bottom, rgba(0, 16, 51, 0.95), rgba(5, 26, 30, 0.95));
+    /* Change the color of the scroll bar track */
+    /* border-radius: 10px; */
+    /* Add a rounded corner to the scroll bar track */
+}
+
+/* Firefox */
+/* scrollbar-width: thin; */
+/* Change the width of the scroll bar */
+/* scrollbar-color: #007bff #f1f1f1; */
+/* Change the color of the scroll bar thumb and track */

@@ -48,8 +48,8 @@ export default function PolicyTabsSection() {
                     value={selectedTab}
                     onChange={handleTabChange}
                     centered
-                    indicatorColor="secondary"
-                    textColor="secondary"
+                    indicatorColor="primary"
+                    textColor="primary"
                     sx={{}}
                 >
                     {policies?.map((policy, index) => (
@@ -86,7 +86,7 @@ export default function PolicyTabsSection() {
                                         />
                                         <Button
                                             variant="contained"
-                                            color="secondary"
+                                            color="primary"
                                             href={pdfUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"

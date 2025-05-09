@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import HeroSection from '@/components/shared/HeroSection';
 import PolicyTabsSection from './components/PolicyTabsSection';
 import FAQSection from './components/FAQSection';
@@ -95,7 +96,7 @@ export default function About() {
                         <List>
                             {features.map((feature, index) => (
                                 <ListItem key={index}>
-                                    <ListItemIcon><CheckCircle color="secondary" /></ListItemIcon>
+                                    <ListItemIcon><CheckCircle color="primary" /></ListItemIcon>
                                     <ListItemText primary={feature} />
                                 </ListItem>
                             ))}
@@ -132,7 +133,7 @@ export default function About() {
                         <Card sx={{ height: '100%' }}>
                             <CardContent>
                                 <Typography variant="h3" align="center" fontWeight="bold">
-                                    <VerifiedUser sx={{ verticalAlign: 'middle', mr: 1 }} />
+                                    <VerifiedUser color='primary' fontSize='large' sx={{ verticalAlign: 'middle', mr: 1 }} />
                                     Quality Commitment
                                 </Typography>
                                 <Typography align="center">
@@ -151,7 +152,7 @@ export default function About() {
                         <Card sx={{ height: '100%' }}>
                             <CardContent>
                                 <Typography variant="h3" align="center" fontWeight="bold">
-                                    <TrendingUp sx={{ verticalAlign: 'middle', mr: 1 }} />
+                                    <TrendingUp color='primary' fontSize='large' sx={{ verticalAlign: 'middle', mr: 1 }} />
                                     Sustainable Growth
                                 </Typography>
                                 <Typography align="center">
@@ -206,8 +207,8 @@ export default function About() {
                         '/clients/sprocomm.png', '/clients/foxconn3.jpg', '/clients/karbonn.png',
                     ].map((img, index) => (
                         <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }} key={index} >
-                            <Card sx={{ p: 2 }}>
-                                <img src={img} alt="Client logo" loading="lazy" style={{ height: 50, margin: 'auto' }} />
+                            <Card sx={{ p: 2, bgcolor: 'white' }}>
+                                <img src={img} alt="Client logo" loading="lazy" style={{ alignSelf: "center", display: "block", margin: "auto", height: 50 }} />
                             </Card>
                         </Grid>
                     ))}
@@ -243,7 +244,7 @@ export default function About() {
                     <Typography variant="body1">
                         Contact our sales team for OEM solutions or bulk orders.
                     </Typography>
-                    <Button variant="contained" color="secondary" href="/contact" sx={{ mt: 2 }}>
+                    <Button variant="contained" color="primary" href="/contact" sx={{ mt: 2 }}>
                         Get Custom Quote
                     </Button>
                 </Stack>

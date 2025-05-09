@@ -204,7 +204,7 @@ const imageMap: any = {
 // Main component
 export default function AlbumStrip() {
     const { spacing } = useTheme()
-     
+
     const { isMobile } = useDeviceType()
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [selectedAlbum, setSelectedAlbum] = useState<any>(null);
@@ -220,7 +220,7 @@ export default function AlbumStrip() {
     return (
         <Stack gap={spacing(4)}>
             <Stack>
-                <Typography data-aos="fade-right" variant={'body1'} fontWeight="bold">Latest Blog Posts</Typography>
+                <Typography data-aos="fade-right" variant={'h2'} fontWeight="bold">Latest Blog Posts</Typography>
             </Stack>
             <Grid container spacing={spacing(4)}>
                 {albums?.map((post, index) => (

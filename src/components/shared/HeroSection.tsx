@@ -86,7 +86,7 @@ const HeroSection = ({
                                         key={index}
                                         underline="hover"
 
-                                        sx={{ fontWeight: 'bold', color: 'secondary.light', ':hover': { color: 'orange' } }}
+                                        sx={{ fontWeight: 'bold', color: 'primary.main', ':hover': { color: 'orange' } }}
                                         href={crumb.href}
                                     >
                                         {crumb.label}

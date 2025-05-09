@@ -1,9 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 import React from 'react';
 import {
     AppBar,
     Toolbar,
-
     Button,
     IconButton,
     Drawer,
@@ -16,6 +16,7 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
 import useDeviceType from '@/hooks/ui/useDeviceType';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
     { label: 'Home', href: '/' },
@@ -26,11 +27,13 @@ const navLinks = [
 ];
 
 export default function Header() {
+    const currentRoute = usePathname();
+    // const currentRoute = router.pathname;
     const { isMobile } = useDeviceType()
     const [drawerOpen, setDrawerOpen] = React.useState(false);
 
     return (
-        <AppBar position='fixed'>
+        <AppBar position='fixed' color='default'>
             <Toolbar>
                 {/* <Typography variant="h6" sx={{ flexGrow: 1 }}>
                     </Typography> */}
@@ -74,7 +77,12 @@ export default function Header() {
                     </>
                 ) : (
                     navLinks?.map(({ label, href }) => (
-                        <Button key={href} component={Link} href={href}>
+                        <Button key={href} component={Link} href={href}
+                            sx={{
+                                backgroundColor: currentRoute === href ? 'primary.main' : 'inherit',
+                                color: currentRoute === href ? 'inherit' : 'primary.main',
+                            }}
+                        >
                             {label}
                         </Button>
                     ))

@@ -1,19 +1,23 @@
 'use client'
-import { createTheme, responsiveFontSizes } from '@mui/material';
+import { colors, createTheme, responsiveFontSizes } from '@mui/material';
+// const darkSlateGrey = "rgb(38, 100, 100)"
+// const darkSeaGreen = 'rgb(143,188,143)'
 // Step 1: Base theme to access breakpoints
 const baseTheme = createTheme({
   spacing: 8,
   palette: {
     mode: 'dark',
     primary: {
-      main: '#1976d2', // Professional blue
-      dark: '#004ba0',
-      light: '#63a4ff',
+      main: colors.teal[600], // Professional blue
+
     },
     secondary: {
       main: '#ff4081', // Modern pink accent
       dark: '#c60055',
       light: '#ff79b0',
+    },
+    background:{
+      default: '#1B262C',
     }
   },
   breakpoints: {
@@ -39,12 +43,46 @@ const baseTheme = createTheme({
         root: {
           borderRadius: 8,
           textTransform: 'none',
+          fontWeight:'bold'
         },
       },
+    },
+    MuiAppBar:{
+       styleOverrides:{
+        root:{
+           backgroundColor: "rgba(1, 19, 29, 0.81)",
+          WebkitBackdropFilter: "blur(10px)",
+          backdropFilter:"blur(10px)"
+        }
+       }
     },
     MuiCard: {
       defaultProps: {
         variant: 'outlined'
+      },
+      styleOverrides:{
+        root: {
+          backgroundColor: "rgba(255, 255, 255, 0.05)",
+          WebkitBackdropFilter: "blur(10px)",
+          borderRadius: 8,
+          boxShadow: `
+            0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0px 2px 4px -1px rgba(0, 0, 0, 0.06),
+            0px 10px 20px -10px rgba(0, 0, 0, 0.2)
+          `,
+          // transform: "translateY(0px) scale(1)",
+          transition: "transform 0.3s  ease-in-out, box-shadow 0.3s ease-in-out",
+          position: "relative",
+          zIndex: 1,
+          "&:hover": {
+            transform: "translateY(-5px) scale(1.02)",
+            boxShadow: `
+              0px 8px 12px -2px rgba(0, 247, 255, 0.4),
+              0px 4px 8px -2px rgba(0, 247, 255, 0.3),
+              0px 20px 30px -10px rgba(0, 204, 255, 0.3)
+            `,
+          },
+        }
       }
     }
   },

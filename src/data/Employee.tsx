@@ -50,7 +50,7 @@ export const employees = [
     {
         id: 5,
         name: 'Sejal Jaiswal',
-        profile: 'Jr. Assistant Executive-HR',
+        profile: 'JR. HR Executive',
         experience: '3+ years',
         description: 'Supports HR processes including recruitment, onboarding, and employee engagement.',
         avatar: '/profile/sejal.jpg',
