@@ -1,6 +1,6 @@
 'use client'
 import { Build, Computer, ElectricalServices, Factory, Leaderboard, Memory, People, PrecisionManufacturing, Verified } from "@mui/icons-material";
-import { Box, Card, CardContent, Stack, Typography } from "@mui/material";
+import { Box, Card, CardContent, Stack, Typography, useTheme } from "@mui/material";
 // @ts-expect-error: Importing Splide and SplideSlide from @splidejs/react-splide is not typed correctly.
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
@@ -21,18 +21,17 @@ const capabilities = [
 ];
 
 export default function AutoPlaySplideCarousel() {
+    const { spacing } = useTheme()
     return (
-        <>
+        <Stack spacing={spacing(4)}>
             <Stack alignItems={'center'}>
                 <Typography data-aos='fade-up' variant={'h2'} fontWeight="bold" align="center">
                     Our Capabilities
                 </Typography>
-
                 <Typography variant={'body1'} align="center" color="text.secondary">
                     Driving excellence with cutting-edge technology.
                 </Typography>
             </Stack>
-
             <Splide
                 options={{
                     type: "loop",
@@ -80,7 +79,7 @@ export default function AutoPlaySplideCarousel() {
                     </SplideSlide>
                 ))}
             </Splide>
-        </>
+        </Stack>
 
     );
 }

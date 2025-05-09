@@ -12,7 +12,7 @@ function LeadingOem() {
 
     return (
         <Stack spacing={4} component="section">
-            <Stack spacing={2}>
+            <Stack spacing={1}>
                 <Typography
                     component='h2'
                     data-aos='fade-up'
@@ -25,7 +25,7 @@ function LeadingOem() {
                 </Typography>
 
                 <Typography
-                    variant='h5'
+                    variant='body1'
                     component='p'
                     color="text.secondary"
                 >

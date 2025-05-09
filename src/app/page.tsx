@@ -3,9 +3,11 @@ import ExpertGuide from '@/components/home/ExpertGuide';
 import Infrastructure from '@/components/home/Infrastructure';
 import LeadingOem from '@/components/home/LeadingOem';
 import Status from '@/components/home/Status';
+import MainContainer from '@/components/shared/MainContainer';
 import AutoPlaySplideCarousel from '@/components/slider/AutoPlaySplideCarousel';
 import SwiperCrousel from '@/components/slider/SwiperCrousel';
 import { whyChooseUs } from '@/data/WhyChoose';
+
 import { ElectricalServices, PrecisionManufacturing, Settings } from '@mui/icons-material';
 import { Box, Button, Card, CardContent, Container, Grid, Stack, Typography } from '@mui/material';
 import Link from 'next/link';
@@ -55,85 +57,81 @@ export default function Home() {
   return (
     <Container maxWidth={false} disableGutters component="main">
       <SwiperCrousel />
-      <Stack spacing={4} p={4}>
+      <MainContainer>
         <Status />
         <LeadingOem />
-        <AutoPlaySplideCarousel />
+      </MainContainer>
+      <AutoPlaySplideCarousel />
+      <MainContainer>
         <Infrastructure />
-        <Stack>
-          <Grid container spacing={4} alignItems="center">
-            <Grid size={{ xs: 12, md: 4 }} data-aos="zoom-in-right">
-              <Box
-                component="img"
-                src="/image/assembl2.jpg"
-                alt="Mobile charger assembly at Tianyin Worldtech Noida"
-                sx={{
-                  width: '100%',
-                  borderRadius: '16px',
-                  boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.1)',
-                }}
-              />
-            </Grid>
-            <Grid size={{ xs: 12, md: 8 }} data-aos="zoom-in-left">
-              <Stack gap={3}>
-                <Typography component="h1" variant="h2" fontWeight="bold">
-                  OEM Mobile Charger Manufacturer in Noida – Tianyin Worldtech
-                </Typography>
-                <Typography textAlign="justify" variant="body1" color="text.secondary">
-                  At <strong>Tianyin Worldtech</strong>, we deliver high-quality mobile chargers known for reliability, efficiency, and safety. As a premier <strong>OEM mobile charger manufacturer in Noida</strong>, our chargers support rapid charging and long-lasting performance for all device types. Choose innovation and precision for your power needs.
-                </Typography>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  component={Link}
-                  href="/products"
-                  sx={{ width: 'fit-content', mt: 2 }}
-                >
-                  View Our OEM Chargers
-                </Button>
-              </Stack>
-            </Grid>
+        <Grid container spacing={4} alignItems="center">
+          <Grid size={{ xs: 12, md: 4 }} data-aos="zoom-in-right">
+            <Box
+              component="img"
+              src="/image/assembl2.jpg"
+              alt="Mobile charger assembly at Tianyin Worldtech Noida"
+              sx={{
+                width: '100%',
+                borderRadius: '16px',
+                boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.1)',
+              }}
+            />
           </Grid>
-        </Stack>
-
-        <Stack>
-          <Grid container spacing={4} alignItems="center">
-            <Grid size={{ xs: 12, md: 8 }} data-aos="zoom-in">
-              <Stack gap={3}>
-                <Typography component="h2" variant="h2" fontWeight="bold">
-                  Trusted Mobile Charger Supplier Across India
-                </Typography>
-                <Typography textAlign="justify" variant="body1" color="text.secondary">
-                  As a trusted <strong>mobile charger supplier in India</strong>, Tianyin Worldtech delivers chargers with multi-port compatibility, advanced safety features, and premium materials. From doorstep delivery to after-sales support, we power your journey across India and beyond.
-                </Typography>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  size="large"
-                  component={Link}
-                  href="/contact"
-                  sx={{ width: 'fit-content', mt: 2 }}
-                >
-                  Get in Touch
-                </Button>
-              </Stack>
-            </Grid>
-            <Grid size={{ xs: 12, md: 4 }} data-aos="zoom-in-up">
-              <Box
-                component="img"
-                src="/image/supplier2.jpg"
-                alt="Mobile charger supplier for India at Tianyin Worldtech"
-                sx={{
-                  width: '100%',
-                  borderRadius: '16px',
-                  boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.1)',
-                }}
-              />
-            </Grid>
+          <Grid size={{ xs: 12, md: 8 }} data-aos="zoom-in-left">
+            <Stack gap={3}>
+              <Typography component="h1" variant="h2" fontWeight="bold">
+                OEM Mobile Charger Manufacturer in Noida – Tianyin Worldtech
+              </Typography>
+              <Typography textAlign="justify" variant="body1" color="text.secondary">
+                At <strong>Tianyin Worldtech</strong>, we deliver high-quality mobile chargers known for reliability, efficiency, and safety. As a premier <strong>OEM mobile charger manufacturer in Noida</strong>, our chargers support rapid charging and long-lasting performance for all device types. Choose innovation and precision for your power needs.
+              </Typography>
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                component={Link}
+                href="/products"
+                sx={{ width: 'fit-content', mt: 2 }}
+              >
+                View Our OEM Chargers
+              </Button>
+            </Stack>
           </Grid>
-        </Stack>
-
+        </Grid>
+        <Grid container spacing={4} alignItems="center">
+          <Grid size={{ xs: 12, md: 8 }} data-aos="zoom-in">
+            <Stack gap={3}>
+              <Typography component="h2" variant="h2" fontWeight="bold">
+                Trusted Mobile Charger Supplier Across India
+              </Typography>
+              <Typography textAlign="justify" variant="body1" color="text.secondary">
+                As a trusted <strong>mobile charger supplier in India</strong>, Tianyin Worldtech delivers chargers with multi-port compatibility, advanced safety features, and premium materials. From doorstep delivery to after-sales support, we power your journey across India and beyond.
+              </Typography>
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                component={Link}
+                href="/contact"
+                sx={{ width: 'fit-content', mt: 2 }}
+              >
+                Get in Touch
+              </Button>
+            </Stack>
+          </Grid>
+          <Grid size={{ xs: 12, md: 4 }} data-aos="zoom-in-up">
+            <Box
+              component="img"
+              src="/image/supplier2.jpg"
+              alt="Mobile charger supplier for India at Tianyin Worldtech"
+              sx={{
+                width: '100%',
+                borderRadius: '16px',
+                boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.1)',
+              }}
+            />
+          </Grid>
+        </Grid>
         <Stack spacing={4}>
           <Typography variant="h2" align="center" fontWeight="bold">
             Why Choose Tianyin Worldtech?
@@ -157,22 +155,10 @@ export default function Home() {
             ))}
           </Grid>
         </Stack>
-
-        <ExpertGuide />
-
+      </MainContainer>
+      <ExpertGuide />
+      <MainContainer>
         <Stack>
-          {/* <Box
-            sx={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
-              width: '100%',
-              height: '100%',
-              background: 'radial-gradient(circle, rgba(12, 212, 202, 0.1) 10%, transparent 10.01%)',
-              backgroundSize: '20px 20px',
-              zIndex: 1,
-            }}
-          /> */}
 
           <Stack sx={{ position: 'relative', zIndex: 2 }}>
             <Stack gap={4} textAlign="center" data-aos="fade-up">
@@ -246,7 +232,7 @@ export default function Home() {
             </Stack>
           </Stack>
         </Stack>
-      </Stack>
+      </MainContainer>
     </Container>
   );
 }

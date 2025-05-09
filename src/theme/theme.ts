@@ -1,5 +1,6 @@
 'use client'
 import { colors, createTheme, responsiveFontSizes } from '@mui/material';
+
 // const darkSlateGrey = "rgb(38, 100, 100)"
 // const darkSeaGreen = 'rgb(143,188,143)'
 // Step 1: Base theme to access breakpoints
@@ -16,7 +17,7 @@ const baseTheme = createTheme({
       dark: '#c60055',
       light: '#ff79b0',
     },
-    background:{
+    background: {
       default: '#1B262C',
     }
   },
@@ -43,24 +44,35 @@ const baseTheme = createTheme({
         root: {
           borderRadius: 8,
           textTransform: 'none',
-          fontWeight:'bold'
+          fontWeight: 'bold'
         },
       },
     },
-    MuiAppBar:{
-       styleOverrides:{
-        root:{
-           backgroundColor: "rgba(1, 19, 29, 0.81)",
-          WebkitBackdropFilter: "blur(10px)",
-          backdropFilter:"blur(10px)"
+    MuiContainer: {
+      defaultProps: {
+        maxWidth: 'xl',
+        disableGutters: true
+      },
+      styleOverrides: {
+        root: {
+          // padding: 8
         }
-       }
+      }
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "rgba(1, 19, 29, 0.81)",
+          WebkitBackdropFilter: "blur(10px)",
+          backdropFilter: "blur(10px)"
+        }
+      }
     },
     MuiCard: {
       defaultProps: {
         variant: 'outlined'
       },
-      styleOverrides:{
+      styleOverrides: {
         root: {
           backgroundColor: "rgba(255, 255, 255, 0.05)",
           WebkitBackdropFilter: "blur(10px)",
