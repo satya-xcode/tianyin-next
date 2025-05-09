@@ -6,7 +6,11 @@ function MainContainer({ children, sx, style, ...props }: { children: React.Reac
     const { spacing } = useTheme();
 
     return (
-        <Container {...props} sx={{ display: 'flex', flexDirection: 'column', p: spacing(4), gap: spacing(4), ...sx }} style={style}>
+        <Container
+            {...props}
+            sx={{ display: 'flex', flexDirection: 'column', p: spacing(4), gap: spacing(4), ...sx }}
+            style={style}
+        >
             {children}
         </Container>
     )
