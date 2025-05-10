@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         siteName: 'Tianyin Worldtech Careers',
         images: [
             {
-                url: 'https://tianyin.in/og-image-career.jpg',
+                url: 'https://tianyin.in/image/banners/career23.jpg',
                 width: 1200,
                 height: 630,
                 alt: 'Join Tianyin Worldtech - Career Opportunities in Manufacturing',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
         description:
             'Looking for a career in mobile charger manufacturing? Explore job openings at Tianyin Worldtech and be part of an innovative team in Noida.',
         creator: '@tianyinworldtech',
-        images: ['https://tianyin.in/og-image-career.jpg'],
+        images: ['https://tianyin.in/image/banners/career23.jpg'],
     },
 };
 

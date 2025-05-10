@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         siteName: 'Tianyin Worldtech',
         images: [
             {
-                url: 'https://tianyin.in/og-image-contact.jpg',
+                url: 'https://tianyin.in/image/overview/company-staff.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Tianyin Worldtech Contact - OEM Mobile Charger Manufacturer',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         title: 'Contact Us | Tianyin Worldtech - OEM Charger Manufacturer',
         description: 'Get in touch with Tianyin Worldtech for custom chargers and OEM manufacturing. Serving global clients from Noida, India.',
         creator: '@tianyinworldtech',
-        images: ['https://tianyin.in/og-image-contact.jpg'],
+        images: ['https://tianyin.in/image/overview/company-staff.webp'],
     },
 };
 

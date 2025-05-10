@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
 import { Grid, Typography, Box, IconButton, useTheme, Stack, CardMedia } from "@mui/material";
 import { Facebook, LinkedIn, Mail, Phone, LocationOn, X, Instagram } from "@mui/icons-material";
@@ -118,7 +119,7 @@ const Footer = () => {
                                 </IconButton>
                             </Box>
                             <CardMedia
-                                image="/image/makeindia.png"
+                                image="/image/makeindia.webp"
                                 component={'img'}
                                 alt="make in india"
                                 loading="lazy"

@@ -22,22 +22,34 @@ export const metadata = {
   applicationName: 'Tianyin Worldtech',
   creator: 'Tianyin Worldtech India Pvt. Ltd.',
   publisher: 'Tianyin Worldtech India Pvt. Ltd.',
-  authors: [{ name: 'Tianyin Worldtech Team', url: 'https://tianyinworldtech.com' }],
+  authors: [{ name: 'Tianyin Worldtech Team', url: 'https://tianyin.in' }],
   alternates: {
-    canonical: 'https://tianyinworldtech.com/',
+    canonical: 'https://tianyin.in/',
   },
   openGraph: {
     title: 'Tianyin Worldtech | Best Mobile Charger Manufacturer in Noida, India',
     description:
       'Explore premium mobile chargers from Tianyin Worldtech – OEM supplier based in Noida. Trusted by 150+ global partners for innovation and quality.',
-    url: 'https://tianyinworldtech.com/',
+    url: 'https://tianyin.in/',
     siteName: 'Tianyin Worldtech',
     images: [
       {
-        url: 'https://tianyinworldtech.com/og-image.jpg',
+        url: 'https://www.tianyin.in/image/tianyin-production.webp',
         width: 1200,
         height: 630,
         alt: 'Tianyin Worldtech - Mobile Charger Manufacturer',
+      },
+      {
+        url: 'https://www.tianyin.in/image/team-tianyin.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Team Tianyin - Experts in Charger Manufacturing',
+      },
+      {
+        url: 'https://www.tianyin.in/image/overview/factory-overview.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Tianyin Worldtech Factory Floor - Noida',
       },
     ],
     locale: 'en_IN',
@@ -49,7 +61,7 @@ export const metadata = {
     description:
       'We manufacture high-quality mobile chargers with precision and rapid delivery. Trusted OEM partner in India.',
     creator: '@tianyinworldtech',
-    images: ['https://tianyinworldtech.com/og-image.jpg'],
+    images: ['https://www.tianyin.in/image/tianyin-production.webp'],
   },
 };
 
@@ -68,7 +80,7 @@ export default function Home() {
           <Grid size={{ xs: 12, md: 4 }} data-aos="zoom-in-right">
             <Box
               component="img"
-              src="/image/assembl2.jpg"
+              src="/image/tianyin-production.webp"
               alt="Mobile charger assembly at Tianyin Worldtech Noida"
               sx={{
                 width: '100%',
@@ -122,7 +134,7 @@ export default function Home() {
           <Grid size={{ xs: 12, md: 4 }} data-aos="zoom-in-up">
             <Box
               component="img"
-              src="/image/supplier2.jpg"
+              src="/image/supplier2.webp"
               alt="Mobile charger supplier for India at Tianyin Worldtech"
               sx={{
                 width: '100%',

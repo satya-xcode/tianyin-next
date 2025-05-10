@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         siteName: 'Tianyin Worldtech',
         images: [
             {
-                url: 'https://tianyin.in/image/banners/about.avif',
+                url: 'https://tianyin.in/image/overview/company-building.webp',
                 width: 1200,
                 height: 630,
                 alt: 'Tianyin Worldtech Noida Factory – Electronics Manufacturing',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         description:
             'Explore our company, mission, ISO 9001:2015 certification, and trusted manufacturing for global OEMs.',
         creator: '@tianyinworldtech',
-        images: ['https://tianyin.in/image/banners/about.avif'],
+        images: ['https://tianyin.in/image/overview/staff.webp'],
     },
 };
 
