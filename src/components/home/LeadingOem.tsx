@@ -19,7 +19,7 @@ function LeadingOem() {
                     variant='h1'
                     fontWeight="bold"
                     align='center'
-                    sx={{ color: 'primary.main' }}
+                    sx={{ color: 'primary.light' }}
                 >
                     Leading OEM Manufacturer of Mobile Chargers, Adapters, and Telecom Equipment
                 </Typography>
@@ -38,11 +38,7 @@ function LeadingOem() {
                     <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3 }} key={index} data-aos={industry.dataAos}>
                         <Card
                             elevation={3}
-                            sx={{
-                                height: '100%',
-                                // transition: 'transform 0.3s ease',
-                                // '&:hover': { transform: 'translateY(-5px)' }
-                            }}
+                            sx={{ height: '100%' }}
                         >
                             <CardActionArea
                                 component={Link}

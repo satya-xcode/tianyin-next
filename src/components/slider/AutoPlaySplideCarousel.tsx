@@ -23,7 +23,7 @@ const capabilities = [
 export default function AutoPlaySplideCarousel() {
     const { spacing } = useTheme()
     return (
-        <Stack spacing={spacing(4)}>
+        <Stack spacing={spacing(4)} py={spacing(4)}>
             <Stack alignItems={'center'}>
                 <Typography data-aos='fade-up' variant={'h2'} fontWeight="bold" align="center">
                     Our Capabilities

@@ -3,12 +3,13 @@ import HeroSection from '@/components/shared/HeroSection';
 import PolicyTabsSection from './components/PolicyTabsSection';
 import FAQSection from './components/FAQSection';
 import {
-    Box, Button, Card, CardContent, Container, Grid,
+    Box, Button, Card, CardContent, Grid,
     List, ListItem, ListItemIcon, ListItemText,
     Stack, Typography
 } from '@mui/material';
 import { Metadata } from 'next';
 import { CheckCircle, TrendingUp, VerifiedUser } from '@mui/icons-material';
+import MainContainer from '@/components/shared/MainContainer';
 
 export const metadata: Metadata = {
     title: 'About Tianyin Worldtech | OEM Electronics Manufacturer in Noida, India',
@@ -62,8 +63,7 @@ const features = [
 
 export default function About() {
     return (
-        <Stack spacing={4} component="main">
-
+        <>
             <HeroSection
                 title="Transforming Electronics Manufacturing Since 2015"
                 description="Pioneering sustainable power solutions with cutting-edge technology and ISO-certified quality standards in Noida, India."
@@ -77,109 +77,112 @@ export default function About() {
                 showBackButton
             />
 
-            {/* About Description */}
-            <Stack component="section" sx={{ p: 4 }} aria-labelledby="about-heading">
-                <Grid container spacing={4} alignItems="center">
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <Typography variant="h1" id="about-heading" sx={{ visibility: 'hidden', height: 0, m: 0 }}>
-                            About Tianyin Worldtech - Electronics Manufacturer
-                        </Typography>
-                        <Typography variant="overline" color="primary.light" fontWeight="bold">
-                            Trusted Electronics Manufacturer
-                        </Typography>
-                        <Typography variant="h2" fontWeight="bold">
-                            Noida&apos;s Premier Charger & Power Adapter Manufacturer
-                        </Typography>
-                        <Typography variant="body1">
-                            As an <strong>ISO 9001:2015 certified manufacturer</strong> based in Noida, Tianyin Worldtech combines 20+ years of expertise with cutting-edge SMT production lines to deliver:
-                        </Typography>
-                        <List>
-                            {features.map((feature, index) => (
-                                <ListItem key={index}>
-                                    <ListItemIcon><CheckCircle color="primary" /></ListItemIcon>
-                                    <ListItemText primary={feature} />
-                                </ListItem>
-                            ))}
-                        </List>
-                        <Typography variant="body1">
-                            Serving <strong>50+ global clients</strong> with monthly production capacity of 1M+ units across our 20,000 sq.ft facility.
-                        </Typography>
+            <MainContainer>
+
+                {/* About Description */}
+                <Stack component="section" sx={{}} aria-labelledby="about-heading">
+                    <Grid container spacing={4} alignItems="center">
+                        <Grid size={{ xs: 12, md: 6 }}>
+                            <Typography variant="h1" id="about-heading" sx={{ visibility: 'hidden', height: 0, m: 0 }}>
+                                About Tianyin Worldtech - Electronics Manufacturer
+                            </Typography>
+                            <Typography variant="overline" color="primary.light" fontWeight="bold">
+                                Trusted Electronics Manufacturer
+                            </Typography>
+                            <Typography variant="h2" fontWeight="bold">
+                                Noida&apos;s Premier Charger & Power Adapter Manufacturer
+                            </Typography>
+                            <Typography variant="body1">
+                                As an <strong>ISO 9001:2015 certified manufacturer</strong> based in Noida, Tianyin Worldtech combines 20+ years of expertise with cutting-edge SMT production lines to deliver:
+                            </Typography>
+                            <List>
+                                {features.map((feature, index) => (
+                                    <ListItem key={index}>
+                                        <ListItemIcon><CheckCircle color="primary" /></ListItemIcon>
+                                        <ListItemText primary={feature} />
+                                    </ListItem>
+                                ))}
+                            </List>
+                            <Typography variant="body1">
+                                Serving <strong>50+ global clients</strong> with monthly production capacity of 1M+ units across our 20,000 sq.ft facility.
+                            </Typography>
+                        </Grid>
+
+                        <Grid size={{ xs: 12, md: 6 }}>
+                            <figure>
+                                <Box
+                                    component="img"
+                                    src="/image/b1.jpg"
+                                    alt="Tianyin Worldtech's manufacturing facility in Noida"
+                                    sx={{ width: '100%', borderRadius: 2, boxShadow: 3 }}
+                                    loading="lazy"
+                                />
+                                <figcaption style={{ textAlign: 'center', marginTop: '8px', fontSize: '0.875rem' }}>
+                                    Our ISO-certified production facility in Noida, Uttar Pradesh
+                                </figcaption>
+                            </figure>
+                        </Grid>
                     </Grid>
+                </Stack>
 
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <figure>
-                            <Box
-                                component="img"
-                                src="/image/b1.jpg"
-                                alt="Tianyin Worldtech's manufacturing facility in Noida"
-                                sx={{ width: '100%', borderRadius: 2, boxShadow: 3 }}
-                                loading="lazy"
-                            />
-                            <figcaption style={{ textAlign: 'center', marginTop: '8px', fontSize: '0.875rem' }}>
-                                Our ISO-certified production facility in Noida, Uttar Pradesh
-                            </figcaption>
-                        </figure>
-                    </Grid>
-                </Grid>
-            </Stack>
-
-            {/* Core Values */}
-            <Stack component="section" p={4} spacing={4} aria-labelledby="core-values">
-                <Typography variant="h2" id="core-values" align="center" fontWeight="bold">
-                    Our Core Values
-                </Typography>
-                <Grid container spacing={4}>
-                    <Grid size={{ xs: 12, md: 6 }} component="article">
-                        <Card sx={{ height: '100%' }}>
-                            <CardContent>
-                                <Typography variant="h3" align="center" fontWeight="bold">
-                                    <VerifiedUser color='primary' fontSize='large' sx={{ verticalAlign: 'middle', mr: 1 }} />
-                                    Quality Commitment
-                                </Typography>
-                                <Typography align="center">
-                                    Our <strong>16-step quality control process</strong> ensures every product meets:
-                                </Typography>
-                                <List dense>
-                                    <ListItem>✓ IEC 60950-1 safety standards</ListItem>
-                                    <ListItem>✓ RoHS compliance</ListItem>
-                                    <ListItem>✓ 100% burn-in testing</ListItem>
-                                </List>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-
-                    <Grid size={{ xs: 12, md: 6 }} component="article">
-                        <Card sx={{ height: '100%' }}>
-                            <CardContent>
-                                <Typography variant="h3" align="center" fontWeight="bold">
-                                    <TrendingUp color='primary' fontSize='large' sx={{ verticalAlign: 'middle', mr: 1 }} />
-                                    Sustainable Growth
-                                </Typography>
-                                <Typography align="center">
-                                    Pioneering eco-friendly manufacturing through:
-                                </Typography>
-                                <List dense>
-                                    <ListItem>● Energy-efficient production lines</ListItem>
-                                    <ListItem>● 90%+ material recycling rate</ListItem>
-                                    <ListItem>● Solar-powered facilities</ListItem>
-                                </List>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                </Grid>
-            </Stack>
-
-            <PolicyTabsSection />
-
-            {/* Certifications */}
-            <Stack component="section" aria-labelledby="certifications">
-                <Container maxWidth="lg">
-                    <Typography variant="h2" id="certifications" align="center" fontWeight="bold" gutterBottom>
-                        Certifications & Compliance
+                {/* Core Values */}
+                <Stack component="section" spacing={4} aria-labelledby="core-values">
+                    <Typography variant="h2" id="core-values" align="center" fontWeight="bold">
+                        Our Core Values
                     </Typography>
-                    <Typography variant="body1" align="center" mb={4}>
-                        Our certifications and compliance framework provide assurance to our customers that their products meet the highest standards of safety and quality.
-                    </Typography>
+                    <Grid container spacing={4}>
+                        <Grid size={{ xs: 12, md: 6 }} component="article">
+                            <Card sx={{ height: '100%' }}>
+                                <CardContent>
+                                    <Typography variant="h3" align="center" fontWeight="bold">
+                                        <VerifiedUser color='primary' fontSize='large' sx={{ verticalAlign: 'middle', mr: 1 }} />
+                                        Quality Commitment
+                                    </Typography>
+                                    <Typography align="center">
+                                        Our <strong>16-step quality control process</strong> ensures every product meets:
+                                    </Typography>
+                                    <List dense>
+                                        <ListItem>✓ IEC 60950-1 safety standards</ListItem>
+                                        <ListItem>✓ RoHS compliance</ListItem>
+                                        <ListItem>✓ 100% burn-in testing</ListItem>
+                                    </List>
+                                </CardContent>
+                            </Card>
+                        </Grid>
+
+                        <Grid size={{ xs: 12, md: 6 }} component="article">
+                            <Card sx={{ height: '100%' }}>
+                                <CardContent>
+                                    <Typography variant="h3" align="center" fontWeight="bold">
+                                        <TrendingUp color='primary' fontSize='large' sx={{ verticalAlign: 'middle', mr: 1 }} />
+                                        Sustainable Growth
+                                    </Typography>
+                                    <Typography align="center">
+                                        Pioneering eco-friendly manufacturing through:
+                                    </Typography>
+                                    <List dense>
+                                        <ListItem>● Energy-efficient production lines</ListItem>
+                                        <ListItem>● 90%+ material recycling rate</ListItem>
+                                        <ListItem>● Solar-powered facilities</ListItem>
+                                    </List>
+                                </CardContent>
+                            </Card>
+                        </Grid>
+                    </Grid>
+                </Stack>
+
+                <PolicyTabsSection />
+
+                {/* Certifications */}
+                <Stack component="section" alignItems={'center'} spacing={4} aria-labelledby="certifications">
+                    <Stack>
+                        <Typography variant="h2" id="certifications" align="center" fontWeight="bold" >
+                            Certifications & Compliance
+                        </Typography>
+                        <Typography variant="body1" align="center">
+                            Our certifications and compliance framework provide assurance to our customers that their products meet the highest standards of safety and quality.
+                        </Typography>
+                    </Stack>
                     <Grid container spacing={4} justifyContent="center">
                         {[
                             { img: '/certificates/crt.jpeg', alt: 'ISO 9001:2015 Certified' },
@@ -189,31 +192,36 @@ export default function About() {
                             </Grid>
                         ))}
                     </Grid>
-                </Container>
-            </Stack>
 
-            {/* Customers */}
-            <Stack component="section" p={4} spacing={4} alignItems="center">
-                <Typography variant="h2" align="center" fontWeight="bold">
-                    Our Customers
-                </Typography>
-                <Grid container spacing={4} justifyContent="center">
-                    {[
-                        '/clients/airtel2.jpeg', '/clients/changhong.jpeg', '/clients/d2h.png',
-                        '/clients/dishtv.jpeg', '/clients/dixon.png', '/clients/jio2.jpeg',
-                        '/clients/khy.png', '/clients/lava.png', '/clients/LYF.jpg',
-                        '/clients/nokia.png', '/clients/pie.png', '/clients/sercom.png',
-                        '/clients/wingtech2.jpeg', '/clients/itel.png', '/clients/oraimo.png',
-                        '/clients/sprocomm.png', '/clients/foxconn3.jpg', '/clients/karbonn.png',
-                    ].map((img, index) => (
-                        <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }} key={index} >
-                            <Card sx={{ p: 2, bgcolor: 'white' }}>
-                                <img src={img} alt="Client logo" loading="lazy" style={{ alignSelf: "center", display: "block", margin: "auto", height: 50 }} />
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Stack>
+                </Stack>
+
+                {/* Customers */}
+                <Stack component="section" p={4} spacing={4} alignItems="center">
+                    <Typography variant="h2" align="center" fontWeight="bold">
+                        Our Customers
+                    </Typography>
+                    <Grid container spacing={4} justifyContent="center">
+                        {[
+                            '/clients/airtel2.jpeg', '/clients/changhong.jpeg', '/clients/d2h.png',
+                            '/clients/dishtv.jpeg', '/clients/dixon.png', '/clients/jio2.jpeg',
+                            '/clients/khy.png', '/clients/lava.png', '/clients/LYF.jpg',
+                            '/clients/nokia.png', '/clients/pie.png', '/clients/sercom.png',
+                            '/clients/wingtech2.jpeg', '/clients/itel.png', '/clients/oraimo.png',
+                            '/clients/sprocomm.png', '/clients/foxconn3.jpg', '/clients/karbonn.png',
+                        ].map((img, index) => (
+                            <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }} key={index} >
+                                <Card sx={{ p: 2, bgcolor: 'white' }}>
+                                    <img src={img} alt="Client logo" loading="lazy" style={{ alignSelf: "center", display: "block", margin: "auto", height: 50 }} />
+                                </Card>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Stack>
+
+            </MainContainer>
+
+
+
 
             {/* CTA */}
             <Stack
@@ -251,9 +259,9 @@ export default function About() {
             </Stack>
 
             {/* FAQ Section */}
-            <Stack component="section" sx={{ textAlign: 'center' }}>
+            <MainContainer component="section" sx={{ textAlign: 'center' }}>
                 <FAQSection />
-            </Stack>
-        </Stack>
+            </MainContainer>
+        </>
     );
 }

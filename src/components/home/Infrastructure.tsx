@@ -1,6 +1,6 @@
 'use client'
 import useDeviceType from '@/hooks/ui/useDeviceType'
-import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Stack, Typography } from '@mui/material'
+import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Stack, Typography, useTheme } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 import { cardImageZoomStyles } from '../animations/css/export/cardImageZoomStyles'
@@ -8,9 +8,10 @@ import { doubleLineSort, singleLineSort } from '../animations/css/export/textSor
 import { infrastructureData } from '@/data/InfrastructureData'
 
 function Infrastructure() {
+    const { spacing } = useTheme()
     const { isDesktop, isTablet, isMobile } = useDeviceType()
     return (
-        <>
+        <Stack spacing={spacing(4)}>
             <Stack alignItems={'center'}>
                 <Typography data-aos='fade-up' component={'h4'} variant={'h2'} fontWeight="bold" align="center">
                     Our Infrastructure
@@ -56,7 +57,7 @@ function Infrastructure() {
                     </Grid>
                 ))}
             </Grid>
-        </>
+        </Stack>
     )
 }
 

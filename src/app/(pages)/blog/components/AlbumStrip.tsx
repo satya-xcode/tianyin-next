@@ -227,7 +227,7 @@ export default function AlbumStrip() {
                     <Grid size={{ xs: 12, md: 3 }} key={index} data-aos="fade-up">
                         <Card sx={{ display: "flex", flexDirection: "column" }}>
                             {/* <CardActionArea sx={{ height: isMobile ? "auto" : 550 }} onClick={() => handleOpen(post)}> */}
-                            <CardActionArea sx={{ height: isMobile ? "auto" : 480 }} onClick={() => handleOpenDrawer(post)}>
+                            <CardActionArea sx={{ height: isMobile ? "auto" : 500 }} onClick={() => handleOpenDrawer(post)}>
                                 <CardMedia
                                     component="img"
                                     image={post?.images}
@@ -238,7 +238,7 @@ export default function AlbumStrip() {
                                     {/* <Typography variant="overline" color="primary">
                                         {post?.category} • {post?.date}
                                     </Typography> */}
-                                    <Typography variant={'h3'} fontWeight="bold">
+                                    <Typography variant={'h5'} fontWeight="bold">
                                         {post?.title}
                                     </Typography>
                                     <Typography variant={'body1'} color="textSecondary">

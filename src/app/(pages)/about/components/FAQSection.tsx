@@ -25,7 +25,7 @@ const FAQSection = () => {
     const { spacing } = useTheme()
 
     return (
-        <Stack p={4}>
+        <Stack py={4}>
             <Grid container spacing={spacing(4)}>
                 <Grid size={{ xs: 12, md: 6 }} gap={spacing(2)} display={'flex'} flexDirection={'column'}>
                     <Typography data-aos='fade-up' variant={'body1'} color="primary.light" fontWeight="bold">

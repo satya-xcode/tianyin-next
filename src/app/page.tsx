@@ -158,80 +158,80 @@ export default function Home() {
       </MainContainer>
       <ExpertGuide />
       <MainContainer>
-        <Stack>
 
-          <Stack sx={{ position: 'relative', zIndex: 2 }}>
-            <Stack gap={4} textAlign="center" data-aos="fade-up">
-              <Typography
-                variant="h2"
-                fontWeight="bold"
-                color="primary.main"
-                sx={{
-                  textShadow: '0px 10px 15px rgba(12, 212, 202, 0.46)',
-                  letterSpacing: '1px',
-                  wordSpacing: '2px',
-                  lineHeight: '1.2',
-                  fontStyle: 'italic',
-                }}
-              >
-                Powering Innovation and Excellence Since 2015
-              </Typography>
+        <Stack spacing={4} textAlign="center" data-aos="fade-up" sx={{ position: 'relative', zIndex: 2 }}>
+          <Stack>
+            <Typography
+              variant="h2"
+              fontWeight="bold"
+              color="primary.main"
+              sx={{
+                textShadow: '0px 10px 15px rgba(12, 212, 202, 0.46)',
+                letterSpacing: '1px',
+                wordSpacing: '2px',
+                lineHeight: '1.2',
+                fontStyle: 'italic',
+              }}
+            >
+              Powering Innovation and Excellence Since 2015
+            </Typography>
 
-              <Typography align="center" variant="body1" color="textSecondary">
-                We specialize in delivering high-precision manufacturing solutions worldwide, trusted by over 150+ global industries for quality and reliability.
-              </Typography>
-
-              <Grid container spacing={4}>
-                {[{
-                  title: 'Production',
-                  description: 'Efficient, modern production processes ensure top-notch quality and speed.',
-                  icon: <PrecisionManufacturing fontSize="large" />,
-                }, {
-                  title: 'Assembly',
-                  description: 'Accurate integration of components through advanced assembly practices.',
-                  icon: <Settings fontSize="large" />,
-                }, {
-                  title: 'Innovation',
-                  description: 'Continuous R&D investments to create next-gen charging solutions.',
-                  icon: <ElectricalServices fontSize="large" />,
-                }].map((service, index) => (
-                  <Grid size={{ xs: 12, md: 4 }} key={index}>
-                    <Card>
-                      <CardContent>
-                        <Box sx={{ textAlign: 'center', mb: 2 }}>
-                          <Box
-                            sx={{
-                              display: 'inline-flex',
-                              alignItems: 'center',
-                              justifyContent: 'center',
-                              width: '64px',
-                              height: '64px',
-                              borderRadius: '16px',
-                              bgcolor: 'primary.main',
-                              color: 'white',
-                            }}
-                          >
-                            {service.icon}
-                          </Box>
-                        </Box>
-                        <Typography variant="h3" fontWeight="bold" align="center" gutterBottom>
-                          {service.title}
-                        </Typography>
-                        <Typography variant="body1" color="textSecondary" align="center">
-                          {service.description}
-                        </Typography>
-                      </CardContent>
-                    </Card>
-                  </Grid>
-                ))}
-              </Grid>
-
-              <Typography variant="body1" fontWeight="bold" color="primary" sx={{ mt: 4 }}>
-                Need high-quality OEM charger manufacturing? Call us at <span>(+91) 1204109448</span>
-              </Typography>
-            </Stack>
+            <Typography align="center" variant="body1" color="textSecondary">
+              We specialize in delivering high-precision manufacturing solutions worldwide, trusted by over 150+ global industries for quality and reliability.
+            </Typography>
           </Stack>
+
+          <Grid container spacing={4}>
+            {[{
+              title: 'Production',
+              description: 'Efficient, modern production processes ensure top-notch quality and speed.',
+              icon: <PrecisionManufacturing fontSize="large" />,
+            }, {
+              title: 'Assembly',
+              description: 'Accurate integration of components through advanced assembly practices.',
+              icon: <Settings fontSize="large" />,
+            }, {
+              title: 'Innovation',
+              description: 'Continuous R&D investments to create next-gen charging solutions.',
+              icon: <ElectricalServices fontSize="large" />,
+            }].map((service, index) => (
+              <Grid size={{ xs: 12, md: 4 }} key={index}>
+                <Card>
+                  <CardContent>
+                    <Box sx={{ textAlign: 'center', mb: 2 }}>
+                      <Box
+                        sx={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          width: '64px',
+                          height: '64px',
+                          borderRadius: '16px',
+                          bgcolor: 'primary.main',
+                          color: 'white',
+                        }}
+                      >
+                        {service.icon}
+                      </Box>
+                    </Box>
+                    <Typography variant="h3" fontWeight="bold" align="center" gutterBottom>
+                      {service.title}
+                    </Typography>
+                    <Typography variant="body1" color="textSecondary" align="center">
+                      {service.description}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+
+          <Typography variant="body1" fontWeight="bold" color="primary" sx={{}}>
+            Need high-quality OEM charger manufacturing? Call us at <span>(+91) 1204109448</span>
+          </Typography>
+
         </Stack>
+
       </MainContainer>
     </Container>
   );

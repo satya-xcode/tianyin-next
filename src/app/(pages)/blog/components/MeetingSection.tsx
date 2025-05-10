@@ -32,11 +32,12 @@ export default function MeetingSection() {
     const { spacing } = useTheme()
 
     return (
-        <Stack gap={spacing(2)}>
+        <Stack gap={spacing(4)}>
+            <Stack component={'span'}>
+                <Typography data-aos="fade-right" variant={'h2'} fontWeight="bold">Meetings and Events</Typography>
+                <Typography align='left' data-aos="fade-right" variant={'body1'} color="textSecondary">Stay up-to-date with our latest meetings and events, including industry conferences, keynote speeches, and meetings with key stakeholders.</Typography>
 
-            <Typography data-aos="fade-right" variant={'h2'} fontWeight="bold">Meetings and Events</Typography>
-            <Typography align='left' data-aos="fade-right" variant={'body1'} color="textSecondary">Stay up-to-date with our latest meetings and events, including industry conferences, keynote speeches, and meetings with key stakeholders.</Typography>
-
+            </Stack>
             <Grid container spacing={spacing(4)}>
                 {SliderPhotosData.map((item, index) => (
                     <Grid data-aos="fade-up" key={index} size={{ xs: 12, sm: 6, md: 4 }}>

@@ -1,19 +1,35 @@
-'use client'
-import { Container, StackProps, SxProps, useTheme } from '@mui/material'
-import React, { CSSProperties } from 'react'
+'use client';
 
-function MainContainer({ children, sx, style, ...props }: { children: React.ReactNode, sx?: SxProps, style?: CSSProperties } & StackProps) {
-    const { spacing } = useTheme();
+import { Container, ContainerProps, SxProps, useTheme } from '@mui/material';
+import React, { CSSProperties } from 'react';
+
+function MainContainer({
+    children,
+    sx,
+    style,
+    ...props
+}: {
+    children: React.ReactNode;
+    sx?: SxProps;
+    style?: CSSProperties;
+} & ContainerProps) {
+    const theme = useTheme();
 
     return (
         <Container
             {...props}
-            sx={{ display: 'flex', flexDirection: 'column', p: spacing(4), gap: spacing(4), ...sx }}
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                p: theme.spacing(4),
+                gap: theme.spacing(8),
+                ...sx,
+            }}
             style={style}
         >
             {children}
         </Container>
-    )
+    );
 }
 
-export default MainContainer
+export default MainContainer;

@@ -1,6 +1,6 @@
 'use client'
 import { WhatsApp } from '@mui/icons-material'
-import { Button, Grid, Stack, Typography } from '@mui/material'
+import { Button, Grid, Stack, Typography, useTheme } from '@mui/material'
 import React from 'react'
 
 
@@ -13,6 +13,7 @@ const handleClick = () => {
 };
 
 function ExpertGuide() {
+    const { spacing } = useTheme()
     return (
         <Stack
             sx={{
@@ -20,7 +21,8 @@ function ExpertGuide() {
                 backgroundImage: "url('/slider/smt1.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                p: 4,
+                p: spacing(4),
+                my: spacing(4),
                 // borderRadius: '24px',
                 textAlign: "center",
                 boxShadow: '0px 10px 30px rgba(0, 0, 0, 0.2)',

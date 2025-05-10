@@ -1,8 +1,9 @@
-import { Container, Grid, Typography, Card, CardContent, IconButton, Stack, CardActionArea } from "@mui/material";
+import { Grid, Typography, Card, CardContent, IconButton, Stack, CardActionArea } from "@mui/material";
 import { Phone, Email, LocationOn } from "@mui/icons-material";
 import HeroSection from "@/components/shared/HeroSection";
 import ContactForm from "./components/ContactForm";
 import { Metadata } from "next";
+import MainContainer from "@/components/shared/MainContainer";
 
 export const metadata: Metadata = {
     title: 'Contact Us | Tianyin Worldtech - OEM Charger Manufacturer in Noida, India',
@@ -64,10 +65,10 @@ export default function Home() {
                 showBackButton
             />
 
-            <Stack spacing={4} p={4}>
+            <MainContainer>
                 <Grid container spacing={4} alignItems={'center'} justifyContent={'center'}>
                     {/* Phone Card */}
-                    <Grid size={{ xs: 12, sm: 6, md: 3 }} data-aos="flip-right">
+                    <Grid size={{ xs: 12, sm: 6 }} data-aos="flip-right">
                         <Card sx={{ minHeight: 200 }}>
                             <CardContent>
                                 <IconButton sx={{ color: "#1976D2" }}>
@@ -86,7 +87,7 @@ export default function Home() {
                     </Grid>
 
                     {/* Email Card */}
-                    <Grid size={{ xs: 12, sm: 6, md: 3 }} data-aos="flip-left">
+                    <Grid size={{ xs: 12, sm: 6 }} data-aos="flip-left">
                         <Card sx={{ minHeight: 200 }}>
                             <CardActionArea href={`https://mail.google.com/mail/?view=cm&fs=1&to=${companyEmail}&su=${subject}&body=${body}`} target="_blank" rel="noopener noreferrer" sx={{ minHeight: 200 }}>
                                 <CardContent>
@@ -104,53 +105,41 @@ export default function Home() {
                         </Card>
                     </Grid>
                 </Grid>
-            </Stack>
-
-            {/* Contact Form */}
-            <Stack gap={4}>
-                <Container>
-                    <Stack mb={4} alignItems={'center'}>
-                        <Typography variant={'h2'} fontWeight="bold" align="center">
-                            Get in Touch
-                        </Typography>
-                    </Stack>
-
-                    <ContactForm />
-                </Container>
-
-                {/* Location Section */}
-                <Stack component="section" gap={2} aria-labelledby="location-heading">
-                    <Stack alignItems={'center'}>
-                        <Typography variant={'h2'} id="location-heading" fontWeight="bold" align="center">
-                            Our Location
-                        </Typography>
-                    </Stack>
-
-                    <Stack direction={'row'} gap={2} alignItems={'center'} justifyContent={'center'}>
-                        <IconButton>
-                            <LocationOn fontSize="large" />
-                        </IconButton>
-                        <address itemScope itemType="https://schema.org/PostalAddress">
-                            <Typography component="span" itemProp="name">Tianyin Worldtech India Pvt Ltd</Typography><br />
-                            <span itemProp="streetAddress">B-204, Phase-II, Gautam Budha Nagar</span><br />
-                            <span itemProp="addressLocality">Noida</span>,
-                            <span itemProp="addressRegion">Uttar Pradesh</span> -
-                            <span itemProp="postalCode">201305</span>
-                        </address>
-                    </Stack>
-
-                    {/* Google Maps Embedded */}
-                    <iframe
-                        title="Charger Manufacturing Facility Location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224243.26257035806!2d77.16644393873901!3d28.575738492064293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce9abf4df69f3%3A0x3e15387dc811e242!2sTianyin%20worldtech%20India%20Pvt%20ltd%20head%20office!5e0!3m2!1sen!2sin!4v1713435678681!5m2!1sen!2sin"
-                        width="100%"
-                        height="600"
-                        style={{ border: 0 }}
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                    />
+                <ContactForm />
+            </MainContainer>
+            {/* Location Section */}
+            <Stack component="section" gap={2} aria-labelledby="location-heading">
+                <Stack alignItems={'center'}>
+                    <Typography variant={'h2'} id="location-heading" fontWeight="bold" align="center">
+                        Our Location
+                    </Typography>
                 </Stack>
+
+                <Stack direction={'row'} gap={2} alignItems={'center'} justifyContent={'center'}>
+                    <IconButton>
+                        <LocationOn fontSize="large" />
+                    </IconButton>
+                    <address itemScope itemType="https://schema.org/PostalAddress">
+                        <Typography component="span" itemProp="name">Tianyin Worldtech India Pvt Ltd</Typography><br />
+                        <span itemProp="streetAddress">B-204, Phase-II, Gautam Budha Nagar</span><br />
+                        <span itemProp="addressLocality">Noida</span>,
+                        <span itemProp="addressRegion">Uttar Pradesh</span> -
+                        <span itemProp="postalCode">201305</span>
+                    </address>
+                </Stack>
+
+                {/* Google Maps Embedded */}
+                <iframe
+                    title="Charger Manufacturing Facility Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224243.26257035806!2d77.16644393873901!3d28.575738492064293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce9abf4df69f3%3A0x3e15387dc811e242!2sTianyin%20worldtech%20India%20Pvt%20ltd%20head%20office!5e0!3m2!1sen!2sin!4v1713435678681!5m2!1sen!2sin"
+                    width="100%"
+                    height="600"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                />
             </Stack>
+
         </>
     );
 };
