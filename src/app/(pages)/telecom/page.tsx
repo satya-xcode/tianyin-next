@@ -19,6 +19,7 @@ const fg11 = '/products/telecom/5g11.png'
 const fg13 = '/products/telecom/5g13.png'
 import HeroSection from '@/components/shared/HeroSection';
 import useDeviceType from '@/hooks/ui/useDeviceType';
+import MainContainer from '@/components/shared/MainContainer';
 
 const products = [
     {
@@ -284,7 +285,7 @@ const products = [
 ];
 function TelecomPage() {
     const { spacing } = useTheme()
-const {isMobile} = useDeviceType()
+    const { isMobile } = useDeviceType()
     const [dialogOpen, setDialogOpen] = React.useState(false);
     const [selectedProduct, setSelectedProduct] = React.useState<any>(null);
 
@@ -306,7 +307,7 @@ const {isMobile} = useDeviceType()
                 title="Innovative Telecom Solutions"
                 description="Discover our range of cutting-edge telecom products, designed to deliver seamless connectivity and unparalleled performance."
                 backgroundImage={'/products/telecom/telecom2.jpg'}
-        
+
                 showBreadcrumbs
                 breadcrumbs={[
                     { label: "Home", href: "/" },
@@ -315,17 +316,12 @@ const {isMobile} = useDeviceType()
                 showBackButton
             />
 
-
-
-            <Stack p={4} spacing={4}>
-
-
-
+            <MainContainer>
                 <Grid container justifyContent='center' spacing={spacing(4)}>
                     {/* Map through the products array */}
                     {products?.map((product, index) => (
                         <Grow key={index} in={true} timeout={1000} unmountOnExit>
-                            <Grid  size={{sm:12,md:4,lg:3}}>
+                            <Grid size={{ sm: 12, md: 4, lg: 3 }}>
                                 <Card variant='elevation' elevation={5}>
                                     <CardActionArea onClick={() => openDialog(product)}>
                                         <CardContent sx={{ display: 'flex', textAlign: 'center', flexDirection: 'column', justifyContent: "center" }}>
@@ -413,7 +409,7 @@ const {isMobile} = useDeviceType()
 
 
                 </Grid>
-            </Stack>
+            </MainContainer>
         </>
 
 

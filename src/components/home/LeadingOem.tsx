@@ -8,7 +8,7 @@ import { doubleLineSort, singleLineSort } from '../animations/css/export/textSor
 
 function LeadingOem() {
     const { isMobile, isDesktop, isTablet } = useDeviceType();
-    const cardMediaSize = isMobile ? 130 : isTablet ? 150 : isDesktop ? 170 : 200;
+    const cardMediaSize = isMobile ? 100 : isTablet ? 120 : isDesktop ? 130 : 150;
 
     return (
         <Stack spacing={4} component="section">
@@ -61,24 +61,26 @@ function LeadingOem() {
                                         width={cardMediaSize}
                                         image={industry.image}
                                         alt={`${industry.alt} - Tianyin Worldtech`}
-                                        sx={{ objectFit: 'contain', maxWidth: cardMediaSize }}
+                                        sx={{ objectFit: 'contain' }}
                                     />
 
-                                    <Box display="flex" alignItems="center" gap={2} justifyContent="center">
+                                    <Box display="flex" flexDirection={'row'} alignItems="center" gap={2} justifyContent="center">
                                         <Avatar variant="rounded" sx={{ bgcolor: 'warning.main' }}>
                                             {industry.icon}
                                         </Avatar>
                                         <Box>
                                             <Typography
-                                                variant='h3'
+                                                variant='h5'
                                                 fontWeight="bold"
-                                                sx={{ ...singleLineSort }}
+                                                align='left'
+                                                sx={{ ...doubleLineSort }}
                                             >
                                                 {industry.title}
                                             </Typography>
                                             <Typography
                                                 variant="subtitle2"
                                                 color="text.secondary"
+                                                align='left'
                                                 sx={{ ...singleLineSort }}
                                             >
                                                 {industry.subtitle}

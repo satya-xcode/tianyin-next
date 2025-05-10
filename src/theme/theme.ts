@@ -127,6 +127,18 @@ let theme = createTheme(baseTheme, {
         fontSize: '2.25rem',
       },
     },
+    h4: {
+      fontSize: '1.5rem',
+      [baseTheme.breakpoints.up('md')]: {
+        fontSize: '1.75rem',
+      },
+    },
+    h5: {
+      fontSize: '1.25rem',
+      [baseTheme.breakpoints.up('md')]: {
+        fontSize: '1.5rem',
+      },
+    },
     body1: {
       fontSize: '1rem',
       [baseTheme.breakpoints.up('md')]: {

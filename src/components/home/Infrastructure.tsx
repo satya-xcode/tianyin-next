@@ -1,6 +1,6 @@
 'use client'
 import useDeviceType from '@/hooks/ui/useDeviceType'
-import { Box, Card, CardActionArea, CardContent, CardMedia, Grid, Stack, Typography, useTheme } from '@mui/material'
+import { Avatar, Box, Card, CardActionArea, CardContent, CardMedia, Grid, Stack, Typography, useTheme } from '@mui/material'
 import Link from 'next/link'
 import React from 'react'
 import { cardImageZoomStyles } from '../animations/css/export/cardImageZoomStyles'
@@ -42,7 +42,9 @@ function Infrastructure() {
                                     />
                                     <CardContent sx={{ display: "flex", flexDirection: "column", justifyContent: "center", gap: 2 }}>
                                         <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-                                            {item.icon}
+                                            <Avatar variant='rounded' sx={{ bgcolor: 'primary.dark' }}>
+                                                {item.icon}
+                                            </Avatar>
                                             <Typography sx={{ ...singleLineSort }} variant={'h3'} fontWeight="bold">
                                                 {item.title}
                                             </Typography>
