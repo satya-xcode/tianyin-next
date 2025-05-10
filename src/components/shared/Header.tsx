@@ -12,6 +12,7 @@ import {
     ListItemButton,
     ListItemText,
     Box,
+    Stack,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Link from 'next/link';
@@ -33,62 +34,66 @@ export default function Header() {
     const [drawerOpen, setDrawerOpen] = React.useState(false);
 
     return (
-        <AppBar position='fixed' color='default'>
+        <AppBar color='default' position='fixed'>
             <Toolbar>
-                {/* <Typography variant="h6" sx={{ flexGrow: 1 }}>
-                    </Typography> */}
-                <Link href="." style={{ flex: 1 }}>
-                    <img
-                        src={'logo/logo.png'}
-                        alt="Tianyin Worldtech India Pvt Ltd Logo"
-                        title="Tianyin Worldtech India Pvt Ltd"
-                        loading="lazy"
-                        width={"120"} // Adjust based on design
-                        height="40"
-                    />
-                </Link>
-                {isMobile ? (
-                    <>
-                        <IconButton
-                            edge="start"
-                            color="inherit"
-                            aria-label="menu"
-                            onClick={() => setDrawerOpen(true)}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Drawer
-                            anchor="left"
-                            open={drawerOpen}
-                            onClose={() => setDrawerOpen(false)}
-                        >
-                            <Box sx={{ width: 250 }} role="presentation" onClick={() => setDrawerOpen(false)}>
-                                <List>
-                                    {navLinks.map(({ label, href }) => (
-                                        <ListItem key={href} disablePadding>
-                                            <ListItemButton component={Link} href={href}>
-                                                <ListItemText primary={label} />
-                                            </ListItemButton>
-                                        </ListItem>
-                                    ))}
-                                </List>
-                            </Box>
-                        </Drawer>
-                    </>
-                ) : (
-                    navLinks?.map(({ label, href }) => (
-                        <Button key={href} component={Link} href={href}
-                            sx={{
-                                backgroundColor: currentRoute === href ? 'primary.main' : 'inherit',
-                                color: currentRoute === href ? 'inherit' : 'primary.main',
-                            }}
-                        >
-                            {label}
-                        </Button>
-                    ))
-                )}
+                <Stack flexGrow={1} direction={'row'} justifyContent={'space-between'}>
+                    <Stack href="." flex={1} component={Link}>
+                        <img
+                            src={'logo/logo.png'}
+                            alt="Tianyin Worldtech India Pvt Ltd Logo"
+                            title="Tianyin Worldtech India Pvt Ltd"
+                            loading="lazy"
+                            width={"120"} // Adjust based on design
+                            height="40"
+                        />
+                    </Stack>
+
+                    <Stack component={'div'} direction={'row'} alignItems={'center'}>
+                        {isMobile ? (
+                            <>
+                                <IconButton
+                                    edge="start"
+                                    color="inherit"
+                                    aria-label="menu"
+                                    onClick={() => setDrawerOpen(true)}
+                                >
+                                    <MenuIcon />
+                                </IconButton>
+                                <Drawer
+                                    anchor="left"
+                                    open={drawerOpen}
+                                    onClose={() => setDrawerOpen(false)}
+                                >
+                                    <Box sx={{ width: 250 }} role="presentation" onClick={() => setDrawerOpen(false)}>
+                                        <List>
+                                            {navLinks.map(({ label, href }) => (
+                                                <ListItem key={href} disablePadding>
+                                                    <ListItemButton component={Link} href={href}>
+                                                        <ListItemText primary={label} />
+                                                    </ListItemButton>
+                                                </ListItem>
+                                            ))}
+                                        </List>
+                                    </Box>
+                                </Drawer>
+                            </>
+                        ) : (
+                            navLinks?.map(({ label, href }) => (
+                                <Button key={href} component={Link} href={href}
+                                    sx={{
+                                        backgroundColor: currentRoute === href ? 'primary.main' : 'inherit',
+                                        color: currentRoute === href ? 'inherit' : 'primary.main',
+                                    }}
+                                >
+                                    {label}
+                                </Button>
+                            ))
+                        )}
+                    </Stack>
+
+                </Stack>
             </Toolbar>
-        </AppBar>
+        </AppBar >
 
     );
 }

@@ -5,8 +5,8 @@ import { Metadata } from "next";
 import MainContainer from "@/components/shared/MainContainer";
 
 export const metadata: Metadata = {
-    title: 'Blog | YourBrand',
-    description: 'Welcome to YourBrand. Learn about our mission and services.',
+    title: 'Blog | Tianyin Worldtech india pvt ltd.',
+    description: 'Welcome to Tianyin Worldtech india pvt ltd.. Learn about our mission and services.',
 };
 
 const BlogPage = () => {

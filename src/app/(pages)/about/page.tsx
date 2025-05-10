@@ -209,9 +209,9 @@ export default function About() {
                             '/clients/wingtech2.jpeg', '/clients/itel.png', '/clients/oraimo.png',
                             '/clients/sprocomm.png', '/clients/foxconn3.jpg', '/clients/karbonn.png',
                         ].map((img, index) => (
-                            <Grid size={{ xs: 6, sm: 4, md: 3, lg: 2 }} key={index} >
+                            <Grid size={{ xs: 12, sm: 6, md: 4, lg: 3, xl: 2 }} key={index} >
                                 <Card sx={{ p: 2, bgcolor: 'white' }}>
-                                    <img src={img} alt="Client logo" loading="lazy" style={{ alignSelf: "center", display: "block", margin: "auto", height: 50 }} />
+                                    <img src={img} alt="Client logo" loading="lazy" style={{ maxWidth: 150, alignSelf: "center", display: "block", margin: "auto", height: 50 }} />
                                 </Card>
                             </Grid>
                         ))}

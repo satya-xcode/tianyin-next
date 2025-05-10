@@ -48,10 +48,22 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://tianyin.in/og-image.jpg', // Real OG image
+        url: 'https://tianyin.in/image/overview/building-logo.webp', // Real OG image
         width: 1200,
         height: 630,
         alt: 'Tianyin Worldtech India - OEM Charger Manufacturer',
+      },
+      {
+        url: 'https://tianyin.in/image/chargers/charger3.webp', // Real OG image
+        width: 1200,
+        height: 630,
+        alt: 'Tianyin Worldtech India - OEM Charger Manufacturer',
+      },
+      {
+        url: 'https://tianyin.in/image/adapters/adapter1.webp', // Real OG image
+        width: 1200,
+        height: 630,
+        alt: 'Tianyin Worldtech India - OEM Adapter Manufacturer',
       },
     ],
   },
@@ -60,7 +72,7 @@ export const metadata: Metadata = {
     title: 'Tianyin Worldtech India Pvt. Ltd.',
     description:
       'OEM manufacturer of chargers, adapters, and EV charging solutions. Based in Noida, India.',
-    images: ['https://tianyin.in/og-image.jpg'],
+    images: ['https://tianyin.in/image/chargers/charger3.webp'],
   },
   robots: {
     index: true,
@@ -95,7 +107,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   colorScheme: 'dark light',
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'cyan' },
+    { media: '(prefers-color-scheme: light)', color: '#00897b' },
     { media: '(prefers-color-scheme: dark)', color: 'black' },
   ],
   userScalable: true,

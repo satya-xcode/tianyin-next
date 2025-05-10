@@ -9,7 +9,7 @@ import SwiperCrousel from '@/components/slider/SwiperCrousel';
 import { whyChooseUs } from '@/data/WhyChoose';
 
 import { ElectricalServices, PrecisionManufacturing, Settings } from '@mui/icons-material';
-import { Box, Button, Card, CardContent, Container, Grid, Stack, Typography } from '@mui/material';
+import { Box, Button, Card, CardContent, Grid, Stack, Typography } from '@mui/material';
 import Link from 'next/link';
 
 export const metadata = {
@@ -67,7 +67,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <Container maxWidth={false} disableGutters component="main">
+    <Box component="main">
       <SwiperCrousel />
       <MainContainer>
         <Status />
@@ -245,6 +245,6 @@ export default function Home() {
         </Stack>
 
       </MainContainer>
-    </Container>
+    </Box>
   );
 }
